@@ -1,8 +1,0 @@
-.git
-.git/**
-.gitignore
-.DS_Store
-wrangler.toml
-.assetsignore
-.wrangler
-.wrangler/**
