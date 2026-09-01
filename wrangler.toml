@@ -1,5 +1,14 @@
 name = "dextorsuite"
 compatibility_date = "2026-08-26"
+workers_dev = true
 
 [assets]
 directory = "./"
+
+[[routes]]
+pattern = "dextorsuite.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.dextorsuite.com"
+custom_domain = true
