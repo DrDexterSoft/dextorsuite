@@ -1,11 +1,11 @@
 {
-    "name": "obdex",
-    "short_name": "obdex",
+    "name": "Dextor",
+    "short_name": "Dextor",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#1a0d3b",
     "theme_color": "#1a0d3b",
-    "description": "A new Flutter project.",
+    "description": "Ficha clínica y gestión integral de consultorio para Ginecología y Obstetricia.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
