@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Planes de Dextor: mensual, anual o acceso local de por vida.">
+  <title>Dextor — Planes y precios</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#fff;--text:#18212f;--muted:#657184;--line:#e5eaf0;--accent:#315f78;--accent2:#24495e;--amber:#b8860b}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    header{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;padding:48px 20px 40px;text-align:center}
+    .brand{font-size:32px;font-weight:750;letter-spacing:-.5px}
+    .tag{opacity:.85;margin-top:8px;font-size:17px;max-width:520px;margin-left:auto;margin-right:auto}
+    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+    nav button{border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:7px 12px;cursor:pointer;font-weight:600;font-size:13px}
+    nav button.active,nav button:hover{background:#fff;color:var(--accent2)}
+    main{max-width:1000px;margin:-28px auto 40px;padding:0 18px}
+    .plans{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;align-items:stretch}
+    .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 24px;width:270px;box-shadow:0 8px 30px rgba(25,45,65,.08);display:flex;flex-direction:column}
+    .plan.destacado{border:2px solid var(--accent);box-shadow:0 12px 36px rgba(25,45,65,.14)}
+    .badge{align-self:center;background:var(--accent);color:#fff;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+    .plan h2{font-size:19px;margin:0 0 6px;text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center}
+    .precio{font-size:32px;font-weight:750;text-align:center;letter-spacing:-.5px}
+    .periodo{text-align:center;color:var(--muted);font-size:13px;margin-bottom:18px}
+    .plan ul{list-style:none;padding:0;margin:0 0 22px;flex:1}
+    .plan li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;color:var(--text);padding:5px 0}
+    .plan li::before{content:"✓";color:var(--accent);font-weight:700;flex-shrink:0}
+    .cta{display:block;text-align:center;text-decoration:none;background:var(--accent2);color:#fff;font-weight:700;border-radius:10px;padding:12px 16px;font-size:14.5px}
+    .cta:hover{background:var(--accent)}
+    .plan.lifetime .badge{background:var(--amber)}
+    footer{text-align:center;color:var(--muted);font-size:13px;padding:8px 20px 40px}
+    footer a{color:var(--accent2)}
+    @media(max-width:600px){header{padding:38px 16px 32px}main{margin-top:-20px}.plan{width:100%;max-width:340px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="brand">Dextor</div>
+  <div class="tag" id="tag"></div>
+  <nav aria-label="Language">
+    <button data-lang="en">EN</button><button data-lang="es">ES</button><button data-lang="pt">PT</button>
+    <button data-lang="it">IT</button><button data-lang="fr">FR</button><button data-lang="de">DE</button>
+  </nav>
+</header>
+<main>
+  <div class="plans" id="plans"></div>
+</main>
+<footer id="footer"></footer>
+<script>
+const APP_URL = 'https://dextorsuite.com';
+
+// Cada plan: nombre, precio, período, lista de características y —solo
+// el anual y el de por vida— una etiqueta ("badge"). El botón de cada
+// plan usa el mismo texto ("cta") y lleva siempre a la app: esta página
+// no cobra nada, solo muestra los planes (ver "ctaLabel" más abajo).
+const copy = {
+en:{title:"Dextor — Plans & Pricing",tag:"Cloud-based clinical records for gynecology and obstetrics practices. Desktop, web, and mobile, all in sync.",
+  cta:"Go to the app",popular:"Most popular",oneTime:"One-time payment",
+  legal:{terms:"Terms",privacy:"Privacy",refunds:"Refunds"},
+  monthly:{name:"Monthly",price:"US$ 9.99",period:"per month",feats:["Cloud sync","Full access from the mobile app","Automatic backup","Use it on desktop, web, and mobile at the same time"]},
+  yearly:{name:"Yearly",price:"US$ 99.90",period:"per year",feats:["Cloud sync","Full access from the mobile app","Automatic backup","Use it on desktop, web, and mobile at the same time"]},
+  lifetime:{name:"Permanent local access, no cloud",price:"US$ 249",period:"one-time payment",feats:["One-time payment, forever","Local use on your desktop computer","No cloud sync or mobile app — add them later with a subscription"]}},
+es:{title:"Dextor — Planes y precios",tag:"Ficha clínica en la nube para consultorios de ginecología y obstetricia. Escritorio, web y app móvil, sincronizados.",
+  cta:"Ingresar a la aplicación",popular:"Más elegido",oneTime:"Pago único",
+  legal:{terms:"Términos",privacy:"Privacidad",refunds:"Reembolsos"},
+  monthly:{name:"Mensual",price:"US$ 9.99",period:"por mes",feats:["Sincronización en la nube","Acceso completo desde la app móvil","Copia de seguridad automática","Usalo en escritorio, web y celular a la vez"]},
+  yearly:{name:"Anual",price:"US$ 99.90",period:"por año",feats:["Sincronización en la nube","Acceso completo desde la app móvil","Copia de seguridad automática","Usalo en escritorio, web y celular a la vez"]},
+  lifetime:{name:"Acceso local permanente sin nube",price:"US$ 249",period:"pago único",feats:["Pago único, para siempre","Uso local en tu computadora de escritorio","Sin nube ni app móvil — podés sumarlas después con una suscripción"]}},
+pt:{title:"Dextor — Planos e preços",tag:"Ficha clínica na nuvem para consultórios de ginecologia e obstetrícia. Desktop, web e app móvel, sincronizados.",
+  cta:"Acessar o aplicativo",popular:"Mais escolhido",oneTime:"Pagamento único",
+  legal:{terms:"Termos",privacy:"Privacidade",refunds:"Reembolsos"},
+  monthly:{name:"Mensal",price:"US$ 9.99",period:"por mês",feats:["Sincronização na nuvem","Acesso completo pelo aplicativo móvel","Backup automático","Use no desktop, na web e no celular ao mesmo tempo"]},
+  yearly:{name:"Anual",price:"US$ 99.90",period:"por ano",feats:["Sincronização na nuvem","Acesso completo pelo aplicativo móvel","Backup automático","Use no desktop, na web e no celular ao mesmo tempo"]},
+  lifetime:{name:"Acesso local permanente sem nuvem",price:"US$ 249",period:"pagamento único",feats:["Pagamento único, para sempre","Uso local no seu computador de desktop","Sem nuvem nem aplicativo móvel — pode adicionar depois com uma assinatura"]}},
+it:{title:"Dextor — Piani e prezzi",tag:"Cartella clinica in cloud per studi di ginecologia e ostetricia. Desktop, web e app mobile, sincronizzati.",
+  cta:"Vai all'app",popular:"Il più scelto",oneTime:"Pagamento unico",
+  legal:{terms:"Termini",privacy:"Privacy",refunds:"Rimborsi"},
+  monthly:{name:"Mensile",price:"US$ 9.99",period:"al mese",feats:["Sincronizzazione cloud","Accesso completo dall'app mobile","Backup automatico","Usalo su desktop, web e cellulare insieme"]},
+  yearly:{name:"Annuale",price:"US$ 99.90",period:"all'anno",feats:["Sincronizzazione cloud","Accesso completo dall'app mobile","Backup automatico","Usalo su desktop, web e cellulare insieme"]},
+  lifetime:{name:"Accesso locale permanente senza cloud",price:"US$ 249",period:"pagamento unico",feats:["Pagamento unico, per sempre","Uso locale sul tuo computer desktop","Senza cloud né app mobile — puoi aggiungerli dopo con un abbonamento"]}},
+fr:{title:"Dextor — Offres et tarifs",tag:"Dossier médical dans le cloud pour les cabinets de gynécologie et d'obstétrique. Ordinateur, web et mobile, synchronisés.",
+  cta:"Accéder à l'application",popular:"Le plus choisi",oneTime:"Paiement unique",
+  legal:{terms:"Conditions",privacy:"Confidentialité",refunds:"Remboursements"},
+  monthly:{name:"Mensuel",price:"US$ 9.99",period:"par mois",feats:["Synchronisation dans le cloud","Accès complet depuis l'application mobile","Sauvegarde automatique","Utilisez-le sur ordinateur, web et mobile en même temps"]},
+  yearly:{name:"Annuel",price:"US$ 99.90",period:"par an",feats:["Synchronisation dans le cloud","Accès complet depuis l'application mobile","Sauvegarde automatique","Utilisez-le sur ordinateur, web et mobile en même temps"]},
+  lifetime:{name:"Accès local permanent sans cloud",price:"US$ 249",period:"paiement unique",feats:["Paiement unique, pour toujours","Utilisation locale sur votre ordinateur de bureau","Sans cloud ni application mobile — ajoutez-les plus tard avec un abonnement"]}},
+de:{title:"Dextor — Pläne und Preise",tag:"Cloud-Patientenakte für gynäkologische und geburtshilfliche Praxen. Desktop, Web und Handy, synchronisiert.",
+  cta:"Zur App",popular:"Am beliebtesten",oneTime:"Einmalzahlung",
+  legal:{terms:"Bedingungen",privacy:"Datenschutz",refunds:"Rückerstattungen"},
+  monthly:{name:"Monatlich",price:"US$ 9.99",period:"pro Monat",feats:["Cloud-Synchronisierung","Voller Zugriff über die mobile App","Automatisches Backup","Nutze es gleichzeitig auf Desktop, Web und Handy"]},
+  yearly:{name:"Jährlich",price:"US$ 99.90",period:"pro Jahr",feats:["Cloud-Synchronisierung","Voller Zugriff über die mobile App","Automatisches Backup","Nutze es gleichzeitig auf Desktop, Web und Handy"]},
+  lifetime:{name:"Dauerhafter lokaler Zugriff ohne Cloud",price:"US$ 249",period:"Einmalzahlung",feats:["Einmalzahlung, für immer","Lokale Nutzung auf deinem Desktop-Computer","Ohne Cloud oder mobile App — später mit einem Abonnement hinzufügen"]}},
+};
+
+function chooseLanguage(){
+  const saved=localStorage.getItem("dextorPricingLang");
+  if(saved && copy[saved]) return saved;
+  const langs=(navigator.languages||[navigator.language||"es"]).map(x=>x.toLowerCase().split("-")[0]);
+  return langs.find(x=>copy[x]) || "es";
+}
+
+function planHtml(plan, extraClass, badge){
+  return `<div class="plan${extraClass?" "+extraClass:""}">`+
+    (badge?`<div class="badge">${badge}</div>`:"")+
+    `<h2>${plan.name}</h2>`+
+    `<div class="precio">${plan.price}</div>`+
+    `<div class="periodo">${plan.period}</div>`+
+    `<ul>${plan.feats.map(f=>`<li>${f}</li>`).join("")}</ul>`+
+    `<a class="cta" href="${APP_URL}">${plan.cta}</a>`+
+  `</div>`;
+}
+
+function render(lang){
+  const c=copy[lang]||copy.es;
+  document.documentElement.lang=lang;
+  document.title=c.title;
+  document.getElementById("tag").textContent=c.tag;
+  const monthly={...c.monthly,cta:c.cta};
+  const yearly={...c.yearly,cta:c.cta};
+  const lifetime={...c.lifetime,cta:c.cta};
+  document.getElementById("plans").innerHTML=
+    planHtml(monthly,"",null)+
+    planHtml(yearly,"destacado",c.popular)+
+    planHtml(lifetime,"lifetime",c.oneTime);
+  document.getElementById("footer").innerHTML=
+    `© 2026 Dextor / DrDexterSoft · Paraguay · `+
+    `<a href="https://dextorsuite.com/terms.html">${c.legal.terms}</a> · `+
+    `<a href="https://dextorsuite.com/privacy.html">${c.legal.privacy}</a> · `+
+    `<a href="https://dextorsuite.com/refunds.html">${c.legal.refunds}</a>`;
+  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+  localStorage.setItem("dextorPricingLang",lang);
+}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>render(b.dataset.lang)));
+render(chooseLanguage());
+</script>
+</body>
+</html>
