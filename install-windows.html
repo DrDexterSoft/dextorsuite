@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="How to install Dextor on Windows">
+  <title>Dextor — Install on Windows</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#fff;--text:#18212f;--muted:#657184;--line:#e5eaf0;--accent:#315f78;--accent2:#24495e;
+          --win-bg:#f3f3f3;--win-border:#d6d6d6;--win-btn:#e1e1e1;--win-btn-border:#adadad;--win-accent:#0067c0}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.68}
+    header{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;padding:42px 20px 34px}
+    .wrap{max-width:940px;margin:auto}.brand{font-size:30px;font-weight:750;letter-spacing:-.5px}.tag{opacity:.82;margin-top:2px}
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+    nav button{border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:7px 12px;cursor:pointer;font-weight:600}
+    nav button.active,nav button:hover{background:#fff;color:var(--accent2)}
+    main{max-width:940px;margin:-18px auto 50px;padding:0 18px;position:relative}
+    article{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,54px);box-shadow:0 20px 55px rgba(25,45,65,.12)}
+    h1{font-size:clamp(28px,5vw,40px);line-height:1.1;margin:0 0 8px;letter-spacing:-1px}
+    .updated{color:var(--muted);margin-bottom:30px}
+    .step{display:flex;gap:18px;margin:34px 0}
+    .step-num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+    .step-body{flex:1;min-width:0}
+    .step h2{font-size:19px;margin:2px 0 8px}
+    .step p{margin:6px 0}
+    .notice{background:#fff8df;border:1px solid #ead999;border-left:4px solid #d6a800;padding:15px 17px;border-radius:10px;margin:22px 0}
+    footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 36px}
+    a{color:var(--accent2)}
+
+    /* --- mockups de las ventanas de Windows (SmartScreen / UAC), no son capturas reales --- */
+    .winmock{background:var(--win-bg);border:1px solid var(--win-border);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18);
+              max-width:520px;margin:20px 0;overflow:hidden;font-family:"Segoe UI",Arial,sans-serif}
+    .winmock-title{background:#fff;padding:8px 12px;font-size:12px;color:#444;border-bottom:1px solid var(--win-border);display:flex;justify-content:space-between}
+    .winmock-title.uac{background:#fdf6dc}
+    .winmock-body{padding:20px 22px}
+    .winmock-icon{width:40px;height:40px;flex:none}
+    .winmock-row{display:flex;gap:14px}
+    .winmock-heading{font-size:16px;font-weight:600;margin:0 0 6px}
+    .winmock-text{font-size:13px;color:#333;margin:0 0 14px}
+    .winmock-link{font-size:13px;color:var(--win-accent);text-decoration:underline;cursor:default}
+    .winmock-link.highlight{background:#fff4b8;outline:3px solid #e6b800;border-radius:3px;padding:1px 4px}
+    .winmock-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+    .winmock-btn{font-size:12px;padding:7px 18px;border-radius:3px;border:1px solid var(--win-btn-border);background:var(--win-btn);color:#111;cursor:default}
+    .winmock-btn.primary{background:var(--win-accent);color:#fff;border-color:var(--win-accent)}
+    .winmock-btn.highlight{outline:3px solid #e6b800}
+    .winmock-detail{font-size:12px;color:#555;background:#e9e9e9;border-radius:4px;padding:8px 10px;margin:0 0 14px}
+    .winmock-detail div{margin:2px 0}
+
+    .guide-image{margin:8px 0 34px}
+    .guide-image img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(25,45,65,.12)}
+    .guide-caption{font-size:13px;color:var(--muted);margin-top:9px}
+    @media(max-width:600px){header{padding-top:28px}article{border-radius:12px}.step{flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+   <div class="brand">Dextor</div>
+   <div class="tag" id="tagline">How to install on Windows</div>
+   <nav aria-label="Language">
+    <button data-lang="en">EN</button><button data-lang="es">ES</button><button data-lang="pt">PT</button>
+    <button data-lang="it">IT</button><button data-lang="fr">FR</button><button data-lang="de">DE</button>
+   </nav>
+ </div>
+</header>
+<main><article id="policy"></article></main>
+<footer>© 2026 Dextor / DrDexterSoft · Paraguay</footer>
+<script>
+// Iconos de los mockups (mismos para todos los idiomas).
+const shieldSvg = `<svg class="winmock-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 3 L35 9 V19 C35 28 29 34 20 37 C11 34 5 28 5 19 V9 Z" fill="#0067c0"/>
+  <path d="M20 3 L35 9 V19 C35 28 29 34 20 37 Z" fill="#59a6e0"/>
+  <path d="M14 20 L18 24 L27 14" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+const uacSvg = `<svg class="winmock-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="10" width="32" height="24" rx="3" fill="#0067c0"/>
+  <rect x="4" y="10" width="32" height="6" rx="3" fill="#59a6e0"/>
+  <rect x="17" y="19" width="6" height="10" fill="#fff"/>
+  <rect x="17" y="14" width="6" height="3" fill="#fff"/>
+</svg>`;
+
+function mockupInicial(t){
+  return `<div class="winmock">
+    <div class="winmock-title"><span>${t.winTitleBar}</span><span>✕</span></div>
+    <div class="winmock-body">
+      <div class="winmock-row">
+        ${shieldSvg}
+        <div>
+          <p class="winmock-heading">${t.winHeading}</p>
+          <p class="winmock-text">${t.winBody}</p>
+          <span class="winmock-link highlight">${t.winMoreInfo}</span>
+        </div>
+      </div>
+      <div class="winmock-actions"><span class="winmock-btn">${t.winDontRun}</span></div>
+    </div>
+  </div>`;
+}
+function mockupExpandido(t){
+  return `<div class="winmock">
+    <div class="winmock-title"><span>${t.winTitleBar}</span><span>✕</span></div>
+    <div class="winmock-body">
+      <div class="winmock-row">
+        ${shieldSvg}
+        <div>
+          <p class="winmock-heading">${t.winHeading}</p>
+          <p class="winmock-text">${t.winBody}</p>
+          <div class="winmock-detail">
+            <div>${t.winApp}: <strong>Dextor-Setup.exe</strong></div>
+            <div>${t.winPublisher}: <strong>${t.winUnknown}</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="winmock-actions">
+        <span class="winmock-btn">${t.winDontRun}</span>
+        <span class="winmock-btn primary highlight">${t.winRunAnyway}</span>
+      </div>
+    </div>
+  </div>`;
+}
+function mockupUac(t){
+  return `<div class="winmock">
+    <div class="winmock-title uac"><span>${t.uacTitleBar}</span><span>✕</span></div>
+    <div class="winmock-body">
+      <div class="winmock-row">
+        ${uacSvg}
+        <div>
+          <p class="winmock-text" style="font-size:14px;color:#111">${t.uacBody}</p>
+          <div class="winmock-detail">
+            <div><strong>Dextor-Setup.exe</strong></div>
+            <div>${t.winPublisher}: ${t.winUnknown}</div>
+          </div>
+        </div>
+      </div>
+      <div class="winmock-actions">
+        <span class="winmock-btn primary highlight">${t.uacYes}</span>
+        <span class="winmock-btn">${t.uacNo}</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+const data = {
+es:{guideTitle:"Guía visual de instalación",guideCaption:"Las pantallas pueden variar ligeramente según la versión y configuración de Windows. La imagen usa los textos de Windows en inglés.",tag:"Cómo instalar en Windows",title:"Instalar Dextor en Windows",updated:"Última actualización: 14 de septiembre de 2026",
+  winTitleBar:"Microsoft Defender SmartScreen",winHeading:"Windows protegió su PC",
+  winBody:"Microsoft Defender SmartScreen impidió que se inicie una aplicación no reconocida. Ejecutar esta aplicación podría poner en riesgo su PC.",
+  winMoreInfo:"Más información",winDontRun:"No ejecutar",winRunAnyway:"Ejecutar de todas formas",
+  winApp:"Aplicación",winPublisher:"Editor",winUnknown:"Editor desconocido",
+  uacTitleBar:"Control de cuentas de usuario",
+  uacBody:"¿Querés permitir que esta aplicación de un editor desconocido realice cambios en tu dispositivo?",
+  uacYes:"Sí",uacNo:"No",
+  steps:[
+    ["Descargar el instalador","Descargá <strong>Dextor-Setup.exe</strong> desde el menú de la app (\"Descargar para Windows\") o desde el sitio, y abrilo con doble clic una vez terminada la descarga."],
+    ["Aparece esta pantalla azul","Dextor se distribuye actualmente fuera de Microsoft Store y este instalador no está firmado digitalmente. Por eso Microsoft Defender SmartScreen puede mostrar una advertencia de aplicación no reconocida.@MOCK1@Tocá <strong>«Más información»</strong> (resaltado arriba)."],
+    ["Confirmar la ejecución","La ventana se expande y muestra el nombre del archivo. Tocá <strong>«Ejecutar de todas formas»</strong>.@MOCK2@Esto solo hace falta la primera vez que instalás o actualizás Dextor en ese equipo."],
+    ["Si aparece, confirmá el Control de cuentas de usuario","Windows puede pedir una última confirmación para instalar. Tocá <strong>«Sí»</strong>.@MOCK3@"],
+    ["Seguir el instalador","A partir de acá es un instalador común: «Siguiente» → «Siguiente» → «Instalar» → «Finalizar». Dextor se abre solo al terminar."]
+  ],
+  whyTitle:"¿Por qué pasa esto?",
+  whyBody:"SmartScreen evalúa la reputación del archivo y del editor. Un instalador nuevo o sin firma puede mostrar esta advertencia. Continuá solamente si descargaste Dextor desde el sitio oficial. En algunos equipos con Windows 11, Smart App Control o una política de la organización puede impedir continuar — si te pasa eso, escribinos.",
+  contactBody:`¿Algo no coincide con lo que ves en tu pantalla, o tenés algún problema instalando?<br><br><strong>Dextor / DrDexterSoft</strong><br><a href="mailto:support@dextorsuite.com">support@dextorsuite.com</a>`
+},
+en:{guideTitle:"Visual installation guide",guideCaption:"Screens may vary slightly depending on your Windows version and security settings.",tag:"How to install on Windows",title:"Installing Dextor on Windows",updated:"Last updated: September 14, 2026",
+  winTitleBar:"Microsoft Defender SmartScreen",winHeading:"Windows protected your PC",
+  winBody:"Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.",
+  winMoreInfo:"More info",winDontRun:"Don't run",winRunAnyway:"Run anyway",
+  winApp:"App",winPublisher:"Publisher",winUnknown:"Unknown publisher",
+  uacTitleBar:"User Account Control",
+  uacBody:"Do you want to allow this app from an unknown publisher to make changes to your device?",
+  uacYes:"Yes",uacNo:"No",
+  steps:[
+    ["Download the installer","Download <strong>Dextor-Setup.exe</strong> from the app's menu (\"Download for Windows\") or from the website, and double-click it once the download finishes."],
+    ["This blue screen appears","Dextor is currently distributed outside the Microsoft Store and this installer is not digitally signed. Microsoft Defender SmartScreen may therefore show an unrecognized-app warning.@MOCK1@Tap <strong>\"More info\"</strong> (highlighted above)."],
+    ["Confirm running it","The window expands and shows the file name. Tap <strong>\"Run anyway\"</strong>.@MOCK2@This is only needed the first time you install or update Dextor on that computer."],
+    ["If it appears, confirm User Account Control","Windows may ask for one last confirmation to install. Tap <strong>\"Yes\"</strong>.@MOCK3@"],
+    ["Follow the installer","From here it's a regular installer: \"Next\" → \"Next\" → \"Install\" → \"Finish\". Dextor opens on its own once it's done."]
+  ],
+  whyTitle:"Why does this happen?",
+  whyBody:"SmartScreen evaluates file and publisher reputation. A new or unsigned installer may trigger this warning. Continue only if you downloaded Dextor from the official website. On some Windows 11 PCs, Smart App Control or organization policy may prevent you from continuing — if that happens, reach out to us.",
+  contactBody:`Something doesn't match what you're seeing on your screen, or running into trouble installing?<br><br><strong>Dextor / DrDexterSoft</strong><br><a href="mailto:support@dextorsuite.com">support@dextorsuite.com</a>`
+},
+pt:{guideTitle:"Guia visual de instalação",guideCaption:"As telas podem variar ligeiramente conforme a versão e as configurações do Windows. A imagem usa os textos do Windows em inglês.",tag:"Como instalar no Windows",title:"Instalar o Dextor no Windows",updated:"Última atualização: 14 de setembro de 2026",
+  winTitleBar:"Microsoft Defender SmartScreen",winHeading:"O Windows protegeu o computador",
+  winBody:"O Microsoft Defender SmartScreen impediu o início de um aplicativo não reconhecido. Executar esse aplicativo pode ser um risco para o computador.",
+  winMoreInfo:"Mais informações",winDontRun:"Não executar",winRunAnyway:"Executar mesmo assim",
+  winApp:"Aplicativo",winPublisher:"Editor",winUnknown:"Editor desconhecido",
+  uacTitleBar:"Controle de Conta de Usuário",
+  uacBody:"Deseja permitir que este aplicativo de um editor desconhecido faça alterações no seu dispositivo?",
+  uacYes:"Sim",uacNo:"Não",
+  steps:[
+    ["Baixar o instalador","Baixe o <strong>Dextor-Setup.exe</strong> pelo menu do app (\"Baixar para Windows\") ou pelo site, e dê duplo clique nele assim que o download terminar."],
+    ["Aparece esta tela azul","O Dextor é atualmente distribuído fora da Microsoft Store e este instalador não é assinado digitalmente. Por isso, o Microsoft Defender SmartScreen pode mostrar um aviso de aplicativo não reconhecido.@MOCK1@Toque em <strong>\"Mais informações\"</strong> (destacado acima)."],
+    ["Confirmar a execução","A janela se expande e mostra o nome do arquivo. Toque em <strong>\"Executar mesmo assim\"</strong>.@MOCK2@Isso só é necessário na primeira vez que você instalar ou atualizar o Dextor nesse computador."],
+    ["Se aparecer, confirme o Controle de Conta de Usuário","O Windows pode pedir uma última confirmação para instalar. Toque em <strong>\"Sim\"</strong>.@MOCK3@"],
+    ["Seguir o instalador","A partir daqui é um instalador comum: \"Avançar\" → \"Avançar\" → \"Instalar\" → \"Concluir\". O Dextor abre sozinho ao terminar."]
+  ],
+  whyTitle:"Por que isso acontece?",
+  whyBody:"O SmartScreen avalia a reputação do arquivo e do editor. Um instalador novo ou sem assinatura pode disparar este aviso. Continue somente se você baixou o Dextor pelo site oficial. Em alguns PCs com Windows 11, o Smart App Control ou uma política da organização pode impedir que você continue — se isso acontecer, entre em contato com a gente.",
+  contactBody:`Algo não bate com o que você está vendo, ou teve algum problema ao instalar?<br><br><strong>Dextor / DrDexterSoft</strong><br><a href="mailto:support@dextorsuite.com">support@dextorsuite.com</a>`
+},
+it:{guideTitle:"Guida visiva all'installazione",guideCaption:"Le schermate possono variare leggermente in base alla versione e alle impostazioni di Windows. L'immagine utilizza i testi di Windows in inglese.",tag:"Come installare su Windows",title:"Installare Dextor su Windows",updated:"Ultimo aggiornamento: 14 settembre 2026",
+  winTitleBar:"Microsoft Defender SmartScreen",winHeading:"Windows ha protetto il PC",
+  winBody:"Microsoft Defender SmartScreen ha impedito l'avvio di un'app non riconosciuta. L'esecuzione di questa app potrebbe mettere a rischio il PC.",
+  winMoreInfo:"Ulteriori informazioni",winDontRun:"Non eseguire",winRunAnyway:"Esegui comunque",
+  winApp:"App",winPublisher:"Autore",winUnknown:"Autore sconosciuto",
+  uacTitleBar:"Controllo account utente",
+  uacBody:"Consentire a questa app di un autore sconosciuto di apportare modifiche al tuo dispositivo?",
+  uacYes:"Sì",uacNo:"No",
+  steps:[
+    ["Scaricare l'installer","Scarica <strong>Dextor-Setup.exe</strong> dal menu dell'app (\"Scarica per Windows\") o dal sito, e apri il file con un doppio clic al termine del download."],
+    ["Appare questa schermata blu","Dextor è attualmente distribuito al di fuori del Microsoft Store e questo installer non è firmato digitalmente. Microsoft Defender SmartScreen può quindi mostrare un avviso di app non riconosciuta.@MOCK1@Tocca <strong>«Ulteriori informazioni»</strong> (evidenziato sopra)."],
+    ["Confermare l'esecuzione","La finestra si espande e mostra il nome del file. Tocca <strong>«Esegui comunque»</strong>.@MOCK2@Serve solo la prima volta che installi o aggiorni Dextor su quel computer."],
+    ["Se appare, conferma il Controllo account utente","Windows potrebbe chiedere un'ultima conferma per installare. Tocca <strong>«Sì»</strong>.@MOCK3@"],
+    ["Seguire l'installer","Da qui è un installer normale: «Avanti» → «Avanti» → «Installa» → «Fine». Dextor si apre da solo al termine."]
+  ],
+  whyTitle:"Perché succede questo?",
+  whyBody:"SmartScreen valuta la reputazione del file e dell'autore. Un installer nuovo o non firmato può generare questo avviso. Continua solo se hai scaricato Dextor dal sito ufficiale. Su alcuni PC Windows 11, Smart App Control o una policy aziendale potrebbero impedirti di continuare — se succede, scrivici.",
+  contactBody:`Qualcosa non corrisponde a ciò che vedi sullo schermo, o hai problemi durante l'installazione?<br><br><strong>Dextor / DrDexterSoft</strong><br><a href="mailto:support@dextorsuite.com">support@dextorsuite.com</a>`
+},
+fr:{guideTitle:"Guide visuel d'installation",guideCaption:"Les écrans peuvent varier légèrement selon la version et les paramètres de Windows. L'image utilise les textes de Windows en anglais.",tag:"Comment installer sur Windows",title:"Installer Dextor sur Windows",updated:"Dernière mise à jour : 14 septembre 2026",
+  winTitleBar:"Microsoft Defender SmartScreen",winHeading:"Windows a protégé votre ordinateur",
+  winBody:"Microsoft Defender SmartScreen a empêché le démarrage d'une application non reconnue. L'exécution de cette application peut mettre votre ordinateur en péril.",
+  winMoreInfo:"Plus d'infos",winDontRun:"Ne pas exécuter",winRunAnyway:"Exécuter quand même",
+  winApp:"Application",winPublisher:"Éditeur",winUnknown:"Éditeur inconnu",
+  uacTitleBar:"Contrôle de compte d'utilisateur",
+  uacBody:"Voulez-vous autoriser cette application d'un éditeur inconnu à apporter des modifications à votre appareil ?",
+  uacYes:"Oui",uacNo:"Non",
+  steps:[
+    ["Télécharger l'installateur","Téléchargez <strong>Dextor-Setup.exe</strong> depuis le menu de l'app (\"Télécharger pour Windows\") ou depuis le site, et double-cliquez dessus une fois le téléchargement terminé."],
+    ["Cet écran bleu apparaît","Dextor est actuellement distribué en dehors du Microsoft Store et cet installateur n'est pas signé numériquement. Microsoft Defender SmartScreen peut donc afficher un avertissement d'application non reconnue.@MOCK1@Appuyez sur <strong>« Plus d'infos »</strong> (surligné ci-dessus)."],
+    ["Confirmer l'exécution","La fenêtre s'agrandit et affiche le nom du fichier. Appuyez sur <strong>« Exécuter quand même »</strong>.@MOCK2@Cela n'est nécessaire que la première fois que vous installez ou mettez à jour Dextor sur cet ordinateur."],
+    ["Si elle apparaît, confirmez le Contrôle de compte d'utilisateur","Windows peut demander une dernière confirmation pour installer. Appuyez sur <strong>« Oui »</strong>.@MOCK3@"],
+    ["Suivre l'installateur","À partir de là, c'est un installateur classique : « Suivant » → « Suivant » → « Installer » → « Terminer ». Dextor s'ouvre tout seul une fois terminé."]
+  ],
+  whyTitle:"Pourquoi cela se produit-il ?",
+  whyBody:"SmartScreen évalue la réputation du fichier et de l'éditeur. Un nouvel installateur ou un installateur non signé peut déclencher cet avertissement. Continuez uniquement si vous avez téléchargé Dextor depuis le site officiel. Sur certains PC Windows 11, Smart App Control ou une politique d'entreprise peut vous empêcher de continuer — si cela arrive, contactez-nous.",
+  contactBody:`Quelque chose ne correspond pas à ce que vous voyez à l'écran, ou vous rencontrez un problème à l'installation ?<br><br><strong>Dextor / DrDexterSoft</strong><br><a href="mailto:support@dextorsuite.com">support@dextorsuite.com</a>`
+},
+de:{guideTitle:"Visuelle Installationsanleitung",guideCaption:"Die Bildschirme können je nach Windows-Version und Einstellungen leicht abweichen. Die Abbildung verwendet die englischen Windows-Texte.",tag:"Installation unter Windows",title:"Dextor unter Windows installieren",updated:"Letzte Aktualisierung: 14. September 2026",
+  winTitleBar:"Microsoft Defender SmartScreen",winHeading:"Windows hat den PC geschützt",
+  winBody:"Microsoft Defender SmartScreen hat den Start einer nicht erkannten App verhindert. Durch Ausführen dieser App wird der PC möglicherweise gefährdet.",
+  winMoreInfo:"Weitere Informationen",winDontRun:"Nicht ausführen",winRunAnyway:"Trotzdem ausführen",
+  winApp:"App",winPublisher:"Herausgeber",winUnknown:"Unbekannter Herausgeber",
+  uacTitleBar:"Benutzerkontensteuerung",
+  uacBody:"Möchten Sie zulassen, dass diese App eines unbekannten Herausgebers Änderungen an Ihrem Gerät vornimmt?",
+  uacYes:"Ja",uacNo:"Nein",
+  steps:[
+    ["Installationsprogramm herunterladen","Laden Sie <strong>Dextor-Setup.exe</strong> über das Menü der App (\"Für Windows herunterladen\") oder von der Website herunter und öffnen Sie die Datei nach dem Download per Doppelklick."],
+    ["Dieser blaue Bildschirm erscheint","Dextor wird derzeit außerhalb des Microsoft Store vertrieben und dieses Installationsprogramm ist nicht digital signiert. Microsoft Defender SmartScreen kann deshalb eine Warnung für eine nicht erkannte App anzeigen.@MOCK1@Tippen Sie auf <strong>„Weitere Informationen“</strong> (oben hervorgehoben)."],
+    ["Ausführung bestätigen","Das Fenster erweitert sich und zeigt den Dateinamen an. Tippen Sie auf <strong>„Trotzdem ausführen“</strong>.@MOCK2@Das ist nur beim ersten Installieren oder Aktualisieren von Dextor auf diesem Computer nötig."],
+    ["Falls nötig, Benutzerkontensteuerung bestätigen","Windows fragt möglicherweise ein letztes Mal nach, bevor installiert wird. Tippen Sie auf <strong>„Ja“</strong>.@MOCK3@"],
+    ["Dem Installationsprogramm folgen","Ab hier ist es ein normales Installationsprogramm: „Weiter“ → „Weiter“ → „Installieren“ → „Fertig stellen“. Dextor öffnet sich danach von selbst."]
+  ],
+  whyTitle:"Warum passiert das?",
+  whyBody:"SmartScreen bewertet die Reputation der Datei und des Herausgebers. Ein neues oder nicht signiertes Installationsprogramm kann diese Warnung auslösen. Fahren Sie nur fort, wenn Sie Dextor von der offiziellen Website heruntergeladen haben. Auf manchen Windows-11-PCs kann Smart App Control oder eine Unternehmensrichtlinie die Fortsetzung verhindern — melden Sie sich in dem Fall bei uns.",
+  contactBody:`Stimmt etwas nicht mit dem, was Sie auf dem Bildschirm sehen, oder gibt es Probleme bei der Installation?<br><br><strong>Dextor / DrDexterSoft</strong><br><a href="mailto:support@dextorsuite.com">support@dextorsuite.com</a>`
+}
+};
+
+function render(lang){
+  const t = data[lang] || data.en;
+  document.documentElement.lang = lang;
+  document.title = `Dextor — ${t.title}`;
+  document.getElementById("tagline").textContent = t.tag;
+  const stepsHtml = t.steps.map((s, i) => {
+    // Cada trozo de texto entre marcadores va en su propio <p>; los
+    // marcadores se reemplazan por el mockup correspondiente (fuera de
+    // cualquier <p>, para que el HTML quede válido).
+    const piezas = s[1].split(/(@MOCK1@|@MOCK2@|@MOCK3@)/);
+    const cuerpo = piezas
+      .map((p) => {
+        if (p === '@MOCK1@') return mockupInicial(t);
+        if (p === '@MOCK2@') return mockupExpandido(t);
+        if (p === '@MOCK3@') return mockupUac(t);
+        if (p.trim() === '') return '';
+        return `<p>${p}</p>`;
+      })
+      .join('');
+    return `<div class="step">
+      <div class="step-num">${i + 1}</div>
+      <div class="step-body"><h2>${s[0]}</h2>${cuerpo}</div>
+    </div>`;
+  }).join('');
+  document.getElementById("policy").innerHTML = `
+    <h1>${t.title}</h1>
+    <div class="updated">${t.updated}</div>
+    <div class="guide-image">
+      <h2 style="font-size:22px;margin:0 0 12px">${t.guideTitle}</h2>
+      <img src="assets/windows-install-guide.png" alt="${t.guideTitle}" loading="eager">
+      <div class="guide-caption">${t.guideCaption}</div>
+    </div>
+    ${stepsHtml}
+    <div class="notice"><strong>${t.whyTitle}</strong><br>${t.whyBody}</div>
+    <div class="step" style="margin-top:40px">
+      <div class="step-body"><p>${t.contactBody}</p></div>
+    </div>
+  `;
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+  localStorage.setItem("dextorInstallLang", lang);
+}
+function chooseLanguage(){
+  const saved = localStorage.getItem("dextorInstallLang");
+  if (saved && data[saved]) return saved;
+  const langs = (navigator.languages || [navigator.language || "en"]).map(x => x.toLowerCase().split("-")[0]);
+  return langs.find(x => data[x]) || "en";
+}
+document.querySelectorAll("nav button").forEach(b => b.addEventListener("click", () => render(b.dataset.lang)));
+render(chooseLanguage());
+</script>
+</body>
+</html>

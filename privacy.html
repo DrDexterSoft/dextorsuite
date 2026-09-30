@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Dextor Privacy Policy">
+  <title>Dextor — Privacy Policy</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#fff;--text:#18212f;--muted:#657184;--line:#e5eaf0;--accent:#315f78;--accent2:#24495e}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.68}
+    header{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;padding:42px 20px 34px}
+    .wrap{max-width:940px;margin:auto}.brand{font-size:30px;font-weight:750;letter-spacing:-.5px}.tag{opacity:.82;margin-top:2px}
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+    nav button{border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:7px 12px;cursor:pointer;font-weight:600}
+    nav button.active,nav button:hover{background:#fff;color:var(--accent2)}
+    main{max-width:940px;margin:28px auto 50px;padding:0 18px}
+    article{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,54px);box-shadow:0 8px 30px rgba(25,45,65,.06)}
+    h1{font-size:clamp(30px,5vw,45px);line-height:1.1;margin:0 0 8px;letter-spacing:-1px}
+    .updated{color:var(--muted);margin-bottom:34px} h2{font-size:21px;margin:32px 0 8px} p{margin:8px 0 14px}
+    ul{padding-left:22px} strong{font-weight:700} .notice{background:#f2f6f8;border-left:4px solid var(--accent);padding:13px 16px;border-radius:7px;margin:18px 0}
+    footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 36px}
+    a{color:var(--accent2)} @media(max-width:600px){header{padding-top:28px}article{border-radius:12px}}
+  </style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+   <div class="brand">Dextor</div>
+   <div class="tag" id="tagline">Practice Management for Gynecology & Obstetrics</div>
+   <nav aria-label="Language">
+    <button data-lang="en">EN</button><button data-lang="es">ES</button><button data-lang="pt">PT</button>
+    <button data-lang="it">IT</button><button data-lang="fr">FR</button><button data-lang="de">DE</button>
+   </nav>
+ </div>
+</header>
+<main><article id="policy"></article></main>
+<footer>© 2026 Dextor / DrDexterSoft · Paraguay</footer>
+<script>
+const policies = {
+  "en": {
+    "tag": "Practice Management for Gynecology & Obstetrics",
+    "title": "Privacy Policy",
+    "updated": "Last updated: 2026-09-30",
+    "sections": [
+      [
+        "1. Introduction",
+        "Dextor is a practice management and electronic medical record application designed specifically for gynecology and obstetrics. It enables healthcare professionals to manage patient records, pregnancy follow-up, examinations, surgical records, prescriptions, and information related to their professional practice. This Privacy Policy explains how information is processed, stored, protected, and deleted when Dextor is used."
+      ],
+      [
+        "2. Information processed by Dextor",
+        "<strong>Account and license information.</strong> Dextor processes the information necessary to identify and operate the healthcare professional's account, including the user identifier (UID), email address, license or subscription status, and license expiration information. Authentication is performed through Google Sign-In or Sign in with Apple. Dextor does not maintain its own user passwords.<br><br><strong>Clinical information.</strong> Depending on how the healthcare professional uses Dextor, patient records may contain identification and contact information, medical and gynecological history, obstetric and pregnancy information, examinations, clinical notes and follow-up, surgical records, medical insurance information, prescriptions, reminders configured by the healthcare professional, and other information voluntarily entered into the medical record.<div class=\"notice\">Dextor does not independently determine which examinations, vaccines, treatments, or procedures a patient requires. Pregnancy-related alerts and reminders are configured by the healthcare professional.</div>"
+      ],
+      [
+        "3. Cloud storage and encryption",
+        "Clinical information synchronized through Dextor is encrypted on the user's device before being transmitted to cloud storage. Dextor currently uses AES-256-GCM encryption for clinical information synchronized with the cloud. Cloud database records contain technical identifiers, timestamps, and encrypted data rather than clinical content in readable plain text. This encryption provides an additional layer of protection for clinical information. Dextor does not represent this architecture as zero-knowledge encryption."
+      ],
+      [
+        "4. Local storage",
+        "On supported desktop and mobile platforms, locally stored Dextor information is protected using encryption and a device-specific cryptographic key stored using security mechanisms provided by the operating system, where supported. Security characteristics differ in the web version because web browsers provide a different storage and security environment from native operating systems."
+      ],
+      [
+        "5. Backups",
+        "Dextor allows healthcare professionals to manually export backups. Backups in the current format are encrypted using a key derived from a password selected by the healthcare professional at export. Users are responsible for protecting that password and securely storing and transferring exported backup files."
+      ],
+      [
+        "6. Cloud infrastructure",
+        "Dextor uses Google Firebase services, including Firebase Authentication and Cloud Firestore, for authentication, synchronization, and cloud infrastructure. Clinical data synchronized with Cloud Firestore is encrypted by Dextor before transmission. Each healthcare professional's cloud records are logically isolated through authenticated user identifiers and database security rules. Google processes information according to the terms and privacy practices applicable to its Firebase and Google Cloud services."
+      ],
+      [
+        "7. Authentication",
+        "Dextor supports Google Sign-In and Sign in with Apple. These providers may process information necessary to authenticate users according to their respective privacy policies. Dextor does not receive or store the user's Google or Apple account password."
+      ],
+      [
+        "8. Payments and licensing",
+        "For purchases through Paddle, Paddle processes payment and billing information as merchant of record under its own privacy policy. Dextor processes account email, customer and transaction identifiers, purchased plan, subscription status and billing dates to manage access and support. Dextor does not store full payment card details. Earlier purchases remain subject to the original payment provider’s privacy practices. Billing records may be retained where required for accounting, dispute handling or legal obligations after account deletion. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+      ],
+      [
+        "9. Purposes of processing",
+        "Information is processed as necessary to provide and maintain Dextor, including authentication, synchronization between authorized devices, storage and retrieval of medical records, backup and restoration, license and subscription management, security, maintenance, and technical operation. <strong>Dextor does not sell patient medical records or clinical information and does not use patient clinical information for advertising.</strong>"
+      ],
+      [
+        "10. Healthcare professional responsibility",
+        "The healthcare professional determines what patient information is entered into Dextor and is responsible for using that information in accordance with applicable professional, medical-record, confidentiality, privacy, and data-protection requirements. Dextor is a record-keeping and practice-management tool and does not replace the professional judgment of a qualified healthcare professional."
+      ],
+      [
+        "11. Data retention and deletion",
+        "Information is retained while necessary to provide Dextor and as required for legitimate operational, security, contractual, or legal purposes. From within the app, the healthcare professional can delete an individual patient record at any time, or their entire account (which also deletes every patient record, surgery, and configuration associated with that account) — both actions require a two-step confirmation, since they are irreversible. Deleting the account also automatically cancels any active subscription. These actions may be subject to legal or professional medical-record retention requirements applicable to the healthcare professional or relevant jurisdiction, which remain the healthcare professional's responsibility."
+      ],
+      [
+        "12. Data security",
+        "Dextor uses technical and organizational safeguards intended to protect information against unauthorized access, alteration, disclosure, or loss. No electronic storage or transmission system can guarantee absolute security. Users should protect access to their devices, authentication accounts, and backup passwords."
+      ],
+      [
+        "13. International use",
+        "Dextor is available in multiple languages and may be used in different countries. Privacy, healthcare-record, and data-retention requirements vary by jurisdiction. Healthcare professionals are responsible for ensuring that their use of Dextor complies with requirements applicable to their professional practice and patients."
+      ],
+      [
+        "14. Children's data",
+        "Dextor is intended for use by healthcare professionals and not directly by children. Healthcare professionals may record information concerning minor patients when necessary for medical care and when permitted by applicable law and professional obligations."
+      ],
+      [
+        "15. Changes to this Privacy Policy",
+        "This Privacy Policy may be updated when Dextor's functionality, infrastructure, legal requirements, or data-processing practices change. The current version will be published on the official Dextor website with its last-updated date."
+      ],
+      [
+        "16. GDPR rights (for users in the European Union)",
+        "If the healthcare professional is located in the European Union or the European Economic Area, the General Data Protection Regulation (GDPR) grants them, regarding the account information Dextor processes as controller (see section 2), the following rights: to access their data, to request its rectification or erasure, to request restriction of or object to processing, and to request data portability. These rights can be exercised using the contact information below, and a complaint can also be filed with the relevant data protection supervisory authority. Regarding their patients' clinical information, the healthcare professional acts as the data controller and Dextor as the data processor — see section 10."
+      ],
+      [
+        "17. Contact",
+        "For privacy questions, requests for access or deletion, or other matters concerning personal information:<br><br><strong>Dextor / DrDexterSoft</strong><br>Paraguay<br><a href=\"mailto:support@dextorsuite.com\">support@dextorsuite.com</a><br><a href=\"https://www.dextorsuite.com\">www.dextorsuite.com</a>"
+      ]
+    ]
+  },
+  "es": {
+    "tag": "Gestión de consultorio para Ginecología y Obstetricia",
+    "title": "Política de Privacidad",
+    "updated": "Última actualización: 2026-09-30",
+    "sections": [
+      [
+        "1. Introducción",
+        "Dextor es una aplicación de gestión de consultorio e historia clínica electrónica diseñada específicamente para ginecología y obstetricia. Permite a profesionales de la salud gestionar fichas de pacientes, seguimiento de embarazos, exámenes, registros quirúrgicos, recetas e información relacionada con su práctica profesional. Esta Política explica cómo se procesa, almacena, protege y elimina la información al utilizar Dextor."
+      ],
+      [
+        "2. Información procesada por Dextor",
+        "<strong>Información de cuenta y licencia.</strong> Dextor procesa la información necesaria para identificar y operar la cuenta del profesional, incluyendo identificador de usuario (UID), correo electrónico, estado de licencia o suscripción y vencimiento. La autenticación se realiza mediante Google o Apple. Dextor no mantiene contraseñas propias.<br><br><strong>Información clínica.</strong> Según el uso que haga el profesional, las fichas pueden contener identificación y contacto, antecedentes médicos y ginecológicos, información obstétrica y del embarazo, exámenes, evoluciones y notas clínicas, registros quirúrgicos, seguro médico, recetas, recordatorios configurados por el profesional y otra información incorporada voluntariamente a la historia clínica.<div class=\"notice\">Dextor no determina de manera autónoma qué estudios, vacunas, tratamientos o procedimientos necesita una paciente. Las alertas y recordatorios relacionados con el embarazo son configurados por el profesional de la salud.</div>"
+      ],
+      [
+        "3. Almacenamiento en la nube y cifrado",
+        "La información clínica sincronizada mediante Dextor se cifra en el dispositivo antes de transmitirse a la nube. Dextor utiliza actualmente AES-256-GCM para la información clínica sincronizada. Los registros de la base de datos contienen identificadores técnicos, marcas temporales y datos cifrados en lugar del contenido clínico en texto plano legible. El cifrado proporciona una capa adicional de protección. Dextor no presenta esta arquitectura como cifrado de conocimiento cero (zero-knowledge)."
+      ],
+      [
+        "4. Almacenamiento local",
+        "En plataformas móviles y de escritorio compatibles, la información local se protege mediante cifrado y una clave criptográfica propia del dispositivo almacenada utilizando mecanismos de seguridad del sistema operativo, cuando están disponibles. Las características de seguridad son diferentes en la versión web debido al entorno propio del navegador."
+      ],
+      [
+        "5. Copias de seguridad",
+        "Dextor permite exportar manualmente copias de seguridad. En el formato actual se cifran mediante una clave derivada de una contraseña elegida por el profesional al exportar. El usuario es responsable de proteger esa contraseña y de almacenar y transferir de forma segura los archivos exportados."
+      ],
+      [
+        "6. Infraestructura en la nube",
+        "Dextor utiliza servicios de Google Firebase, incluyendo Firebase Authentication y Cloud Firestore, para autenticación, sincronización e infraestructura en la nube. Los datos clínicos son cifrados por Dextor antes de transmitirse a Cloud Firestore. Los registros de cada profesional están aislados lógicamente mediante identificadores autenticados y reglas de seguridad de la base de datos. Google procesa determinada información conforme a los términos y prácticas de privacidad aplicables a Firebase y Google Cloud."
+      ],
+      [
+        "7. Autenticación",
+        "Dextor admite inicio de sesión con Google y Apple. Estos proveedores pueden procesar la información necesaria para autenticar al usuario según sus respectivas políticas de privacidad. Dextor no recibe ni almacena la contraseña de la cuenta Google o Apple."
+      ],
+      [
+        "8. Pagos y licencias",
+        "Para las compras mediante Paddle, Paddle procesa la información de pago y facturación como vendedor registrado, conforme a su política de privacidad. Dextor procesa el correo de la cuenta, identificadores de cliente y transacción, plan adquirido, estado de suscripción y fechas de facturación para gestionar el acceso y el soporte. Dextor no almacena datos completos de tarjetas. Las compras anteriores siguen sujetas a las prácticas del proveedor de pago original. Los registros de facturación pueden conservarse por obligaciones contables, resolución de disputas o requisitos legales después de eliminar la cuenta. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+      ],
+      [
+        "9. Finalidades del tratamiento",
+        "La información se procesa en la medida necesaria para proporcionar y mantener Dextor, incluyendo autenticación, sincronización entre dispositivos autorizados, almacenamiento y recuperación de historias clínicas, copias de seguridad y restauración, gestión de licencias y suscripciones, seguridad, mantenimiento y funcionamiento técnico. <strong>Dextor no vende historias clínicas ni información clínica de pacientes y no utiliza información clínica con fines publicitarios.</strong>"
+      ],
+      [
+        "10. Responsabilidad del profesional",
+        "El profesional determina qué información de sus pacientes incorpora a Dextor y es responsable de utilizarla de acuerdo con las obligaciones profesionales, de historia clínica, secreto médico, privacidad y protección de datos aplicables. Dextor es una herramienta de registro y gestión del consultorio y no sustituye el criterio profesional de un profesional de la salud cualificado."
+      ],
+      [
+        "11. Conservación y eliminación",
+        "La información se conserva mientras sea necesaria para proporcionar Dextor y cuando resulte necesaria por motivos operativos, de seguridad, contractuales o legales legítimos. Desde la propia aplicación, el profesional puede eliminar en cualquier momento una ficha de paciente en particular, o su cuenta completa (lo que elimina también todas las fichas, cirugías y configuración asociadas a esa cuenta) — ambas acciones piden una doble confirmación, ya que son irreversibles. Al eliminar la cuenta, también se cancela automáticamente cualquier suscripción activa. Estas acciones pueden estar sujetas a obligaciones legales o profesionales de conservación de historias clínicas aplicables al profesional o a la jurisdicción correspondiente, que siguen siendo responsabilidad del profesional."
+      ],
+      [
+        "12. Seguridad",
+        "Dextor utiliza medidas técnicas y organizativas destinadas a proteger la información frente al acceso, modificación, divulgación o pérdida no autorizados. Ningún sistema electrónico de almacenamiento o transmisión puede garantizar seguridad absoluta. Los usuarios deben proteger el acceso a sus dispositivos, cuentas de autenticación y contraseñas de copias de seguridad."
+      ],
+      [
+        "13. Uso internacional",
+        "Dextor está disponible en varios idiomas y puede utilizarse en distintos países. Los requisitos sobre privacidad, historias clínicas y conservación de información varían entre jurisdicciones. El profesional es responsable de asegurarse de que su utilización de Dextor cumpla las obligaciones aplicables a su ejercicio profesional y a sus pacientes."
+      ],
+      [
+        "14. Datos de menores",
+        "Dextor está destinado a profesionales de la salud y no directamente a menores. Los profesionales pueden registrar información de pacientes menores cuando sea necesaria para la atención médica y esté permitida por la legislación y las obligaciones profesionales aplicables."
+      ],
+      [
+        "15. Modificaciones",
+        "Esta Política puede actualizarse cuando cambien las funcionalidades, infraestructura, requisitos legales o prácticas de tratamiento de datos de Dextor. La versión vigente se publicará en el sitio oficial de Dextor indicando la fecha de su última actualización."
+      ],
+      [
+        "16. Derechos bajo el RGPD (para usuarios en la Unión Europea)",
+        "Si el profesional de la salud se encuentra en la Unión Europea o en el Espacio Económico Europeo, el Reglamento General de Protección de Datos (RGPD) le reconoce, respecto de la información de cuenta que Dextor procesa como responsable (ver sección 2), los siguientes derechos: acceder a sus datos, solicitar su rectificación o eliminación, solicitar la limitación o oponerse al tratamiento, y solicitar la portabilidad de sus datos. Estos derechos se pueden ejercer usando el contacto indicado abajo, y también puede presentarse un reclamo ante la autoridad de control de protección de datos correspondiente. Respecto de la información clínica de sus pacientes, el profesional actúa como responsable del tratamiento y Dextor como encargado del tratamiento — ver sección 10."
+      ],
+      [
+        "17. Contacto",
+        "Para consultas sobre privacidad, solicitudes de acceso o eliminación u otras cuestiones relacionadas con datos personales:<br><br><strong>Dextor / DrDexterSoft</strong><br>Paraguay<br><a href=\"mailto:support@dextorsuite.com\">support@dextorsuite.com</a><br><a href=\"https://www.dextorsuite.com\">www.dextorsuite.com</a>"
+      ]
+    ]
+  },
+  "pt": {
+    "title": "Política de Privacidade",
+    "updated": "Última atualização: 2026-09-30",
+    "tag": "Gestão de consultório para Ginecologia e Obstetrícia",
+    "sections": [
+      [
+        "1. Introdução",
+        "Dextor é uma aplicação de gestão de consultório e prontuário médico eletrônico desenvolvida especificamente para ginecologia e obstetrícia. Permite aos profissionais de saúde gerenciar prontuários, acompanhamento de gestações, exames, registros cirúrgicos, prescrições e informações relacionadas à prática profissional. Esta Política explica como as informações são processadas, armazenadas, protegidas e excluídas."
+      ],
+      [
+        "2. Informações processadas pelo Dextor",
+        "<strong>Conta e licença.</strong> Dextor processa UID, e-mail, estado e vencimento da licença ou assinatura. A autenticação é feita pelo Google ou Apple; Dextor não mantém senhas próprias.<br><br><strong>Informações clínicas.</strong> Conforme o uso, podem incluir identificação e contato, antecedentes médicos e ginecológicos, informações obstétricas e da gestação, exames, notas e acompanhamento clínico, registros cirúrgicos, seguro médico, prescrições, lembretes configurados pelo profissional e outras informações inseridas voluntariamente no prontuário.<div class=\"notice\">Dextor não determina autonomamente quais exames, vacinas, tratamentos ou procedimentos um paciente necessita. Alertas e lembretes relacionados à gestação são configurados pelo profissional de saúde.</div>"
+      ],
+      [
+        "3. Armazenamento em nuvem e criptografia",
+        "As informações clínicas sincronizadas são criptografadas no dispositivo antes da transmissão. Dextor utiliza atualmente AES-256-GCM. Os registros na nuvem contêm identificadores técnicos, timestamps e dados criptografados, em vez do conteúdo clínico em texto legível. A criptografia fornece uma camada adicional de proteção. Dextor não apresenta esta arquitetura como criptografia de conhecimento zero (zero-knowledge)."
+      ],
+      [
+        "4. Armazenamento local",
+        "Nas plataformas móveis e desktop compatíveis, os dados locais são protegidos por criptografia e por uma chave específica do dispositivo armazenada através dos mecanismos de segurança do sistema operacional, quando disponíveis. A versão web possui características de segurança diferentes devido ao ambiente do navegador."
+      ],
+      [
+        "5. Cópias de segurança",
+        "Dextor permite exportar backups manualmente. No formato atual, são criptografados com uma chave derivada de uma senha escolhida pelo profissional. O usuário é responsável por proteger essa senha e armazenar e transferir os arquivos com segurança."
+      ],
+      [
+        "6. Infraestrutura em nuvem",
+        "Dextor utiliza Google Firebase, incluindo Firebase Authentication e Cloud Firestore. Os dados clínicos são criptografados pelo Dextor antes da transmissão ao Cloud Firestore. Os registros de cada profissional são isolados logicamente por identificadores autenticados e regras de segurança. O Google processa determinadas informações conforme os termos e práticas aplicáveis ao Firebase e Google Cloud."
+      ],
+      [
+        "7. Autenticação",
+        "Dextor oferece login com Google e Apple. Esses provedores podem processar as informações necessárias à autenticação conforme suas próprias políticas. Dextor não recebe nem armazena a senha da conta Google ou Apple."
+      ],
+      [
+        "8. Pagamentos e licenciamento",
+        "Nas compras pelo Paddle, o Paddle processa informações de pagamento e cobrança como vendedor registrado, conforme sua política de privacidade. Dextor processa email da conta, identificadores de cliente e transação, plano, estado da assinatura e datas de cobrança para gerenciar acesso e suporte. Não armazena dados completos de cartões. Compras anteriores seguem as práticas do provedor original. Registros de cobrança podem ser mantidos após a exclusão da conta por obrigações contábeis, disputas ou requisitos legais. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+      ],
+      [
+        "9. Finalidades do tratamento",
+        "As informações são processadas conforme necessário para autenticação, sincronização, armazenamento e recuperação de prontuários, backup e restauração, gestão de licenças e assinaturas, segurança, manutenção e operação técnica. <strong>Dextor não vende prontuários ou informações clínicas e não utiliza informações clínicas de pacientes para publicidade.</strong>"
+      ],
+      [
+        "10. Responsabilidade do profissional de saúde",
+        "O profissional determina quais informações dos pacientes são inseridas no Dextor e é responsável por utilizá-las conforme as obrigações profissionais, de prontuário, confidencialidade médica, privacidade e proteção de dados aplicáveis. Dextor é uma ferramenta de registro e gestão e não substitui o julgamento profissional de um profissional de saúde qualificado."
+      ],
+      [
+        "11. Retenção e exclusão de dados",
+        "As informações são mantidas enquanto necessárias à prestação do serviço e por motivos operacionais, de segurança, contratuais ou legais legítimos. Dentro do próprio aplicativo, o profissional pode excluir a qualquer momento o prontuário de uma paciente específica, ou sua conta completa (o que também exclui todos os prontuários, cirurgias e configurações associados a essa conta) — as duas ações exigem uma dupla confirmação, por serem irreversíveis. Ao excluir a conta, qualquer assinatura ativa também é cancelada automaticamente. Essas ações podem estar sujeitas a obrigações legais ou profissionais de retenção de prontuários aplicáveis ao profissional ou à jurisdição correspondente, que continuam sendo responsabilidade do profissional."
+      ],
+      [
+        "12. Segurança dos dados",
+        "Dextor utiliza medidas técnicas e organizacionais destinadas a proteger as informações contra acesso, alteração, divulgação ou perda não autorizados. Nenhum sistema eletrônico pode garantir segurança absoluta. Os usuários devem proteger seus dispositivos, contas de autenticação e senhas de backup."
+      ],
+      [
+        "13. Uso internacional",
+        "Dextor está disponível em vários idiomas e pode ser utilizado em diferentes países. As exigências de privacidade, prontuários e retenção variam conforme a jurisdição. O profissional é responsável por garantir que seu uso cumpra as obrigações aplicáveis à sua prática e aos pacientes."
+      ],
+      [
+        "14. Dados de menores",
+        "Dextor destina-se a profissionais de saúde, não diretamente a menores. Informações sobre pacientes menores podem ser registradas quando necessárias ao atendimento e permitidas pela legislação e obrigações profissionais aplicáveis."
+      ],
+      [
+        "15. Alterações desta Política de Privacidade",
+        "Esta Política pode ser atualizada quando mudarem as funcionalidades, infraestrutura, requisitos legais ou práticas de tratamento de dados. A versão vigente será publicada no site oficial do Dextor com a data da última atualização."
+      ],
+      [
+        "16. Direitos sob o RGPD (para usuários na União Europeia)",
+        "Se o profissional de saúde estiver localizado na União Europeia ou no Espaço Econômico Europeu, o Regulamento Geral de Proteção de Dados (RGPD) reconhece, em relação às informações de conta que o Dextor processa como controlador (ver seção 2), os seguintes direitos: acessar seus dados, solicitar sua retificação ou exclusão, solicitar a limitação ou opor-se ao tratamento, e solicitar a portabilidade de seus dados. Esses direitos podem ser exercidos usando o contato indicado abaixo, e também é possível apresentar uma reclamação à autoridade de controle de proteção de dados correspondente. Em relação às informações clínicas de seus pacientes, o profissional atua como controlador dos dados e o Dextor como operador — ver seção 10."
+      ],
+      [
+        "17. Contato",
+        "Para questões de privacidade, pedidos de acesso ou exclusão e outros assuntos relativos a dados pessoais:<br><br><strong>Dextor / DrDexterSoft</strong><br>Paraguai<br><a href=\"mailto:support@dextorsuite.com\">support@dextorsuite.com</a><br><a href=\"https://www.dextorsuite.com\">www.dextorsuite.com</a>"
+      ]
+    ]
+  },
+  "it": {
+    "title": "Informativa sulla Privacy",
+    "updated": "Ultimo aggiornamento: 2026-09-30",
+    "tag": "Gestione dello studio per Ginecologia e Ostetricia",
+    "sections": [
+      [
+        "1. Introduzione",
+        "Dextor è un'applicazione per la gestione dello studio e della cartella clinica elettronica progettata specificamente per ginecologia e ostetricia. Consente ai professionisti sanitari di gestire cartelle dei pazienti, gravidanze, esami, registri chirurgici, prescrizioni e informazioni relative alla pratica professionale. La presente Informativa spiega come le informazioni vengono trattate, archiviate, protette e cancellate."
+      ],
+      [
+        "2. Informazioni trattate da Dextor",
+        "<strong>Account e licenza.</strong> Dextor tratta UID, indirizzo e-mail, stato e scadenza della licenza o dell'abbonamento. L'autenticazione avviene tramite Google o Apple; Dextor non gestisce password proprie.<br><br><strong>Informazioni cliniche.</strong> In base all'utilizzo possono comprendere dati identificativi e di contatto, anamnesi medica e ginecologica, informazioni ostetriche e sulla gravidanza, esami, note e follow-up clinici, registri chirurgici, assicurazione, prescrizioni, promemoria configurati dal professionista e altre informazioni inserite volontariamente nella cartella.<div class=\"notice\">Dextor non determina autonomamente quali esami, vaccini, trattamenti o procedure siano necessari. Gli avvisi e i promemoria relativi alla gravidanza sono configurati dal professionista sanitario.</div>"
+      ],
+      [
+        "3. Archiviazione cloud e cifratura",
+        "I dati clinici sincronizzati vengono cifrati sul dispositivo prima della trasmissione. Dextor utilizza attualmente AES-256-GCM. I record cloud contengono identificatori tecnici, timestamp e dati cifrati invece del contenuto clinico in chiaro. La cifratura offre un ulteriore livello di protezione. Dextor non presenta questa architettura come cifratura zero-knowledge."
+      ],
+      [
+        "4. Archiviazione locale",
+        "Sulle piattaforme native supportate, i dati locali sono protetti mediante cifratura e una chiave specifica del dispositivo conservata tramite i meccanismi di sicurezza del sistema operativo, ove disponibili. La versione web presenta caratteristiche diverse per la natura dell'ambiente browser."
+      ],
+      [
+        "5. Backup",
+        "Dextor consente l'esportazione manuale di backup. Nel formato attuale sono cifrati con una chiave derivata da una password scelta dal professionista. L'utente è responsabile della protezione della password e della conservazione e trasmissione sicura dei file."
+      ],
+      [
+        "6. Infrastruttura cloud",
+        "Dextor utilizza Google Firebase, inclusi Firebase Authentication e Cloud Firestore. I dati clinici sono cifrati da Dextor prima della trasmissione a Cloud Firestore. I record di ciascun professionista sono logicamente isolati mediante identificatori autenticati e regole di sicurezza. Google tratta determinate informazioni secondo i termini e le pratiche applicabili a Firebase e Google Cloud."
+      ],
+      [
+        "7. Autenticazione",
+        "Dextor supporta l'accesso con Google e Apple. Tali fornitori possono trattare le informazioni necessarie all'autenticazione secondo le rispettive informative. Dextor non riceve né conserva la password dell'account Google o Apple."
+      ],
+      [
+        "8. Pagamenti e licenze",
+        "Per gli acquisti tramite Paddle, Paddle tratta i dati di pagamento e fatturazione come venditore ufficiale secondo la propria informativa. Dextor tratta email dell’account, identificativi cliente e transazione, piano, stato dell’abbonamento e date di fatturazione per gestire accesso e assistenza. Non conserva dati completi delle carte. Gli acquisti precedenti seguono le pratiche del fornitore originale. I registri di fatturazione possono essere conservati dopo la cancellazione dell’account per obblighi contabili, controversie o requisiti legali. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+      ],
+      [
+        "9. Finalità del trattamento",
+        "Le informazioni vengono trattate per fornire autenticazione, sincronizzazione, archiviazione e recupero delle cartelle, backup e ripristino, gestione di licenze e abbonamenti, sicurezza, manutenzione e funzionamento tecnico. <strong>Dextor non vende cartelle cliniche o informazioni cliniche e non utilizza informazioni cliniche dei pazienti per finalità pubblicitarie.</strong>"
+      ],
+      [
+        "10. Responsabilità del professionista sanitario",
+        "Il professionista decide quali informazioni inserire ed è responsabile del loro utilizzo in conformità agli obblighi professionali, di cartella clinica, segreto medico, privacy e protezione dei dati applicabili. Dextor è uno strumento di registrazione e gestione e non sostituisce il giudizio professionale di un professionista sanitario qualificato."
+      ],
+      [
+        "11. Conservazione e cancellazione dei dati",
+        "Le informazioni vengono conservate finché necessarie al servizio e per legittime esigenze operative, di sicurezza, contrattuali o legali. Dall'interno dell'app, il professionista può eliminare in qualsiasi momento la cartella di una singola paziente, oppure l'intero account (che elimina anche tutte le cartelle, gli interventi chirurgici e la configurazione associati a quell'account) — entrambe le azioni richiedono una doppia conferma, trattandosi di operazioni irreversibili. Eliminando l'account viene automaticamente annullato anche qualsiasi abbonamento attivo. Queste azioni possono essere soggette a obblighi legali o professionali di conservazione delle cartelle cliniche applicabili al professionista o alla giurisdizione di riferimento, che restano responsabilità del professionista."
+      ],
+      [
+        "12. Sicurezza dei dati",
+        "Dextor adotta misure tecniche e organizzative per proteggere le informazioni da accesso, modifica, divulgazione o perdita non autorizzati. Nessun sistema elettronico può garantire sicurezza assoluta. Gli utenti devono proteggere dispositivi, account di autenticazione e password dei backup."
+      ],
+      [
+        "13. Utilizzo internazionale",
+        "Dextor è disponibile in più lingue e può essere utilizzato in diversi paesi. Gli obblighi relativi a privacy, cartelle cliniche e conservazione variano tra le giurisdizioni. Il professionista è responsabile della conformità del proprio utilizzo alle norme applicabili alla pratica e ai pazienti."
+      ],
+      [
+        "14. Dati dei minori",
+        "Dextor è destinato ai professionisti sanitari e non direttamente ai minori. I professionisti possono registrare dati di pazienti minorenni quando necessari all'assistenza e consentiti dalle norme e dagli obblighi professionali applicabili."
+      ],
+      [
+        "15. Modifiche alla presente Informativa",
+        "La presente Informativa può essere aggiornata in seguito a modifiche delle funzionalità, dell'infrastruttura, dei requisiti legali o delle pratiche di trattamento. La versione vigente sarà pubblicata sul sito ufficiale con la data dell'ultimo aggiornamento."
+      ],
+      [
+        "16. Diritti ai sensi del GDPR (per utenti nell'Unione Europea)",
+        "Se il professionista sanitario si trova nell'Unione Europea o nello Spazio Economico Europeo, il Regolamento Generale sulla Protezione dei Dati (GDPR) gli riconosce, in relazione alle informazioni dell'account trattate da Dextor come titolare (vedi sezione 2), i seguenti diritti: accedere ai propri dati, richiederne la rettifica o la cancellazione, richiedere la limitazione o opporsi al trattamento, e richiedere la portabilità dei dati. Questi diritti possono essere esercitati tramite il contatto indicato di seguito, ed è inoltre possibile presentare un reclamo all'autorità di controllo competente in materia di protezione dei dati. Per quanto riguarda le informazioni cliniche dei propri pazienti, il professionista agisce come titolare del trattamento e Dextor come responsabile del trattamento — vedi sezione 10."
+      ],
+      [
+        "17. Contatti",
+        "Per domande sulla privacy, richieste di accesso o cancellazione e altre questioni relative ai dati personali:<br><br><strong>Dextor / DrDexterSoft</strong><br>Paraguay<br><a href=\"mailto:support@dextorsuite.com\">support@dextorsuite.com</a><br><a href=\"https://www.dextorsuite.com\">www.dextorsuite.com</a>"
+      ]
+    ]
+  },
+  "fr": {
+    "title": "Politique de confidentialité",
+    "updated": "Dernière mise à jour: 2026-09-30",
+    "tag": "Gestion de cabinet pour la Gynécologie et l’Obstétrique",
+    "sections": [
+      [
+        "1. Introduction",
+        "Dextor est une application de gestion de cabinet et de dossier médical électronique conçue spécifiquement pour la gynécologie et l'obstétrique. Elle permet aux professionnels de santé de gérer les dossiers patients, le suivi des grossesses, les examens, les registres chirurgicaux, les prescriptions et les informations liées à leur pratique. Cette Politique explique comment les informations sont traitées, stockées, protégées et supprimées."
+      ],
+      [
+        "2. Informations traitées par Dextor",
+        "<strong>Compte et licence.</strong> Dextor traite l'UID, l'adresse e-mail, le statut et l'expiration de la licence ou de l'abonnement. L'authentification s'effectue via Google ou Apple ; Dextor ne gère pas ses propres mots de passe.<br><br><strong>Informations cliniques.</strong> Selon l'utilisation, elles peuvent comprendre l'identification et les coordonnées, les antécédents médicaux et gynécologiques, les informations obstétricales et de grossesse, examens, notes et suivis cliniques, registres chirurgicaux, assurance, prescriptions, rappels configurés par le professionnel et autres informations saisies volontairement dans le dossier.<div class=\"notice\">Dextor ne détermine pas de manière autonome quels examens, vaccins, traitements ou procédures sont nécessaires. Les alertes et rappels liés à la grossesse sont configurés par le professionnel de santé.</div>"
+      ],
+      [
+        "3. Stockage cloud et chiffrement",
+        "Les données cliniques synchronisées sont chiffrées sur l'appareil avant transmission. Dextor utilise actuellement AES-256-GCM. Les enregistrements cloud contiennent des identifiants techniques, des horodatages et des données chiffrées plutôt que le contenu clinique en clair. Le chiffrement apporte une couche de protection supplémentaire. Dextor ne présente pas cette architecture comme un chiffrement zero-knowledge."
+      ],
+      [
+        "4. Stockage local",
+        "Sur les plateformes natives compatibles, les données locales sont protégées par chiffrement et par une clé propre à l'appareil conservée via les mécanismes de sécurité du système d'exploitation, lorsqu'ils sont disponibles. La version web présente des caractéristiques différentes en raison de l'environnement du navigateur."
+      ],
+      [
+        "5. Sauvegardes",
+        "Dextor permet d'exporter manuellement des sauvegardes. Dans le format actuel, elles sont chiffrées à l'aide d'une clé dérivée d'un mot de passe choisi par le professionnel. L'utilisateur est responsable de la protection du mot de passe ainsi que du stockage et du transfert sécurisés des fichiers."
+      ],
+      [
+        "6. Infrastructure cloud",
+        "Dextor utilise Google Firebase, notamment Firebase Authentication et Cloud Firestore. Les données cliniques sont chiffrées par Dextor avant leur transmission à Cloud Firestore. Les données de chaque professionnel sont isolées logiquement grâce aux identifiants authentifiés et aux règles de sécurité. Google traite certaines informations conformément aux conditions et pratiques applicables à Firebase et Google Cloud."
+      ],
+      [
+        "7. Authentification",
+        "Dextor prend en charge la connexion avec Google et Apple. Ces fournisseurs peuvent traiter les informations nécessaires à l'authentification conformément à leurs politiques respectives. Dextor ne reçoit ni ne stocke le mot de passe du compte Google ou Apple."
+      ],
+      [
+        "8. Paiements et licences",
+        "Pour les achats via Paddle, Paddle traite les données de paiement et de facturation en tant que vendeur officiel selon sa politique de confidentialité. Dextor traite l’email du compte, les identifiants client et transaction, l’offre, le statut de l’abonnement et les dates de facturation pour gérer l’accès et l’assistance. Les données complètes des cartes ne sont pas conservées. Les achats antérieurs restent soumis aux pratiques du prestataire initial. Les données de facturation peuvent être conservées après suppression du compte pour des obligations comptables, des litiges ou des exigences légales. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+      ],
+      [
+        "9. Finalités du traitement",
+        "Les informations sont traitées pour fournir l'authentification, la synchronisation, le stockage et la récupération des dossiers, la sauvegarde et restauration, la gestion des licences et abonnements, la sécurité, la maintenance et le fonctionnement technique. <strong>Dextor ne vend pas les dossiers médicaux ni les informations cliniques et n'utilise pas les informations cliniques des patients à des fins publicitaires.</strong>"
+      ],
+      [
+        "10. Responsabilité du professionnel de santé",
+        "Le professionnel détermine quelles informations sont saisies et est responsable de leur utilisation conformément aux obligations professionnelles, de dossier médical, de secret médical, de confidentialité et de protection des données applicables. Dextor est un outil de tenue de dossiers et de gestion et ne remplace pas le jugement d'un professionnel de santé qualifié."
+      ],
+      [
+        "11. Conservation et suppression des données",
+        "Les informations sont conservées aussi longtemps que nécessaire au service et pour des motifs opérationnels, de sécurité, contractuels ou légaux légitimes. Depuis l'application elle-même, le professionnel peut supprimer à tout moment le dossier d'une patiente en particulier, ou son compte entier (ce qui supprime aussi tous les dossiers, interventions chirurgicales et paramètres associés à ce compte) — ces deux actions demandent une double confirmation, car elles sont irréversibles. La suppression du compte annule aussi automatiquement tout abonnement actif. Ces actions peuvent être soumises aux obligations légales ou professionnelles de conservation des dossiers médicaux applicables au professionnel ou à la juridiction concernée, qui restent de la responsabilité du professionnel."
+      ],
+      [
+        "12. Sécurité des données",
+        "Dextor met en œuvre des mesures techniques et organisationnelles destinées à protéger les informations contre l'accès, la modification, la divulgation ou la perte non autorisés. Aucun système électronique ne peut garantir une sécurité absolue. Les utilisateurs doivent protéger leurs appareils, comptes d'authentification et mots de passe de sauvegarde."
+      ],
+      [
+        "13. Utilisation internationale",
+        "Dextor est disponible en plusieurs langues et peut être utilisé dans différents pays. Les exigences relatives à la confidentialité, aux dossiers médicaux et à la conservation varient selon les juridictions. Le professionnel est responsable de la conformité de son utilisation aux exigences applicables à sa pratique et à ses patients."
+      ],
+      [
+        "14. Données des mineurs",
+        "Dextor est destiné aux professionnels de santé et non directement aux mineurs. Les professionnels peuvent enregistrer des informations concernant des patients mineurs lorsque cela est nécessaire aux soins et autorisé par les règles et obligations professionnelles applicables."
+      ],
+      [
+        "15. Modifications de cette Politique",
+        "Cette Politique peut être mise à jour lorsque les fonctionnalités, l'infrastructure, les exigences légales ou les pratiques de traitement évoluent. La version en vigueur sera publiée sur le site officiel de Dextor avec sa date de dernière mise à jour."
+      ],
+      [
+        "16. Droits au titre du RGPD (pour les utilisateurs de l'Union européenne)",
+        "Si le professionnel de santé se trouve dans l'Union européenne ou l'Espace économique européen, le Règlement général sur la protection des données (RGPD) lui reconnaît, concernant les informations de compte que Dextor traite en tant que responsable du traitement (voir section 2), les droits suivants : accéder à ses données, en demander la rectification ou la suppression, demander la limitation du traitement ou s'y opposer, et demander la portabilité de ses données. Ces droits peuvent être exercés via le contact indiqué ci-dessous, et une réclamation peut également être déposée auprès de l'autorité de contrôle compétente en matière de protection des données. Concernant les informations cliniques de ses patientes, le professionnel agit en tant que responsable du traitement et Dextor en tant que sous-traitant — voir section 10."
+      ],
+      [
+        "17. Contact",
+        "Pour les questions de confidentialité, demandes d'accès ou de suppression et autres questions relatives aux données personnelles :<br><br><strong>Dextor / DrDexterSoft</strong><br>Paraguay<br><a href=\"mailto:support@dextorsuite.com\">support@dextorsuite.com</a><br><a href=\"https://www.dextorsuite.com\">www.dextorsuite.com</a>"
+      ]
+    ]
+  },
+  "de": {
+    "title": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: 2026-09-30",
+    "tag": "Praxisverwaltung für Gynäkologie und Geburtshilfe",
+    "sections": [
+      [
+        "1. Einleitung",
+        "Dextor ist eine speziell für Gynäkologie und Geburtshilfe entwickelte Anwendung zur Praxisverwaltung und elektronischen Patientenaktenführung. Sie ermöglicht medizinischen Fachkräften die Verwaltung von Patientenakten, Schwangerschaftsverläufen, Untersuchungen, Operationsaufzeichnungen, Rezepten und Informationen zur beruflichen Tätigkeit. Diese Datenschutzerklärung erläutert die Verarbeitung, Speicherung, den Schutz und die Löschung von Informationen."
+      ],
+      [
+        "2. Von Dextor verarbeitete Informationen",
+        "<strong>Konto und Lizenz.</strong> Dextor verarbeitet UID, E-Mail-Adresse sowie Status und Ablauf der Lizenz oder des Abonnements. Die Authentifizierung erfolgt über Google oder Apple; Dextor verwaltet keine eigenen Passwörter.<br><br><strong>Klinische Informationen.</strong> Je nach Nutzung können Patientenakten Identifikations- und Kontaktdaten, medizinische und gynäkologische Anamnese, geburtshilfliche und schwangerschaftsbezogene Informationen, Untersuchungen, klinische Notizen und Verläufe, Operationsaufzeichnungen, Versicherungsinformationen, Rezepte, von der Fachkraft konfigurierte Erinnerungen und weitere freiwillig eingegebene Informationen enthalten.<div class=\"notice\">Dextor bestimmt nicht selbstständig, welche Untersuchungen, Impfungen, Behandlungen oder Verfahren erforderlich sind. Schwangerschaftsbezogene Hinweise und Erinnerungen werden von der medizinischen Fachkraft konfiguriert.</div>"
+      ],
+      [
+        "3. Cloud-Speicherung und Verschlüsselung",
+        "Synchronisierte klinische Daten werden vor der Übertragung auf dem Gerät verschlüsselt. Dextor verwendet derzeit AES-256-GCM. Cloud-Datensätze enthalten technische Kennungen, Zeitstempel und verschlüsselte Daten anstelle klinischer Inhalte im lesbaren Klartext. Die Verschlüsselung bietet eine zusätzliche Schutzebene. Dextor bezeichnet diese Architektur nicht als Zero-Knowledge-Verschlüsselung."
+      ],
+      [
+        "4. Lokale Speicherung",
+        "Auf unterstützten nativen Plattformen werden lokale Daten durch Verschlüsselung und einen gerätespezifischen Schlüssel geschützt, der über Sicherheitsmechanismen des Betriebssystems gespeichert wird, sofern verfügbar. Die Webversion weist aufgrund der Browserumgebung andere Sicherheitseigenschaften auf."
+      ],
+      [
+        "5. Sicherungskopien",
+        "Dextor ermöglicht den manuellen Export von Sicherungskopien. Im aktuellen Format werden diese mit einem Schlüssel verschlüsselt, der aus einem von der medizinischen Fachkraft gewählten Passwort abgeleitet wird. Benutzer sind für den Schutz dieses Passworts und die sichere Speicherung und Übertragung der Dateien verantwortlich."
+      ],
+      [
+        "6. Cloud-Infrastruktur",
+        "Dextor nutzt Google Firebase, einschließlich Firebase Authentication und Cloud Firestore. Klinische Daten werden von Dextor vor der Übertragung an Cloud Firestore verschlüsselt. Die Datensätze jeder Fachkraft sind durch authentifizierte Benutzerkennungen und Datenbank-Sicherheitsregeln logisch getrennt. Google verarbeitet bestimmte Informationen gemäß den für Firebase und Google Cloud geltenden Bedingungen und Datenschutzpraktiken."
+      ],
+      [
+        "7. Authentifizierung",
+        "Dextor unterstützt die Anmeldung mit Google und Apple. Diese Anbieter können die zur Authentifizierung erforderlichen Informationen gemäß ihren jeweiligen Datenschutzrichtlinien verarbeiten. Dextor erhält oder speichert das Passwort des Google- oder Apple-Kontos nicht."
+      ],
+      [
+        "8. Zahlungen und Lizenzierung",
+        "Bei Käufen über Paddle verarbeitet Paddle Zahlungs- und Abrechnungsdaten als offizieller Verkäufer gemäß seiner Datenschutzerklärung. Dextor verarbeitet Konto-E-Mail, Kunden- und Transaktionskennungen, Tarif, Abonnementstatus und Abrechnungsdaten für Zugriff und Support. Vollständige Kartendaten werden nicht gespeichert. Frühere Käufe unterliegen den Praktiken des ursprünglichen Anbieters. Abrechnungsunterlagen können nach Kontolöschung für Buchhaltung, Streitfälle oder gesetzliche Pflichten aufbewahrt werden. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+      ],
+      [
+        "9. Zwecke der Verarbeitung",
+        "Informationen werden verarbeitet, soweit dies für Authentifizierung, Synchronisierung, Speicherung und Abruf von Patientenakten, Sicherung und Wiederherstellung, Lizenz- und Abonnementverwaltung, Sicherheit, Wartung und technischen Betrieb erforderlich ist. <strong>Dextor verkauft keine Patientenakten oder klinischen Informationen und verwendet klinische Patienteninformationen nicht für Werbung.</strong>"
+      ],
+      [
+        "10. Verantwortung der medizinischen Fachkraft",
+        "Die medizinische Fachkraft bestimmt, welche Patienteninformationen in Dextor eingegeben werden, und ist für deren Nutzung gemäß den geltenden beruflichen Pflichten, Anforderungen an Patientenakten, ärztlicher Schweigepflicht, Datenschutz und Datensicherheit verantwortlich. Dextor ist ein Dokumentations- und Praxisverwaltungswerkzeug und ersetzt nicht das professionelle Urteil einer qualifizierten medizinischen Fachkraft."
+      ],
+      [
+        "11. Datenspeicherung und Löschung",
+        "Informationen werden so lange gespeichert, wie dies zur Bereitstellung des Dienstes sowie aus legitimen betrieblichen, sicherheitsbezogenen, vertraglichen oder rechtlichen Gründen erforderlich ist. Innerhalb der App kann die medizinische Fachkraft jederzeit die Akte einer einzelnen Patientin löschen oder ihr gesamtes Konto (wodurch auch alle Akten, Operationen und Einstellungen dieses Kontos gelöscht werden) — beide Aktionen erfordern eine doppelte Bestätigung, da sie unwiderruflich sind. Beim Löschen des Kontos wird auch ein eventuell aktives Abonnement automatisch gekündigt. Diese Aktionen können rechtlichen oder beruflichen Aufbewahrungspflichten für Patientenakten unterliegen, die für die medizinische Fachkraft oder die jeweilige Rechtsordnung gelten und weiterhin in deren Verantwortung liegen."
+      ],
+      [
+        "12. Datensicherheit",
+        "Dextor setzt technische und organisatorische Schutzmaßnahmen gegen unbefugten Zugriff, Veränderung, Offenlegung oder Verlust ein. Kein elektronisches System kann absolute Sicherheit gewährleisten. Benutzer sollten ihre Geräte, Authentifizierungskonten und Backup-Passwörter schützen."
+      ],
+      [
+        "13. Internationale Nutzung",
+        "Dextor ist in mehreren Sprachen verfügbar und kann in verschiedenen Ländern genutzt werden. Datenschutz-, Patientenakten- und Aufbewahrungsanforderungen unterscheiden sich je nach Rechtsordnung. Die medizinische Fachkraft ist dafür verantwortlich, dass ihre Nutzung die für ihre Tätigkeit und Patienten geltenden Anforderungen erfüllt."
+      ],
+      [
+        "14. Daten Minderjähriger",
+        "Dextor ist für medizinische Fachkräfte und nicht unmittelbar für Minderjährige bestimmt. Informationen über minderjährige Patienten können gespeichert werden, wenn dies für die medizinische Versorgung erforderlich und nach den geltenden Vorschriften und beruflichen Pflichten zulässig ist."
+      ],
+      [
+        "15. Änderungen dieser Datenschutzerklärung",
+        "Diese Datenschutzerklärung kann aktualisiert werden, wenn sich Funktionen, Infrastruktur, rechtliche Anforderungen oder Datenverarbeitungspraktiken ändern. Die aktuelle Version wird mit dem Datum der letzten Aktualisierung auf der offiziellen Dextor-Website veröffentlicht."
+      ],
+      [
+        "16. Rechte gemäß DSGVO (für Nutzer in der Europäischen Union)",
+        "Befindet sich die medizinische Fachkraft in der Europäischen Union oder im Europäischen Wirtschaftsraum, gewährt ihr die Datenschutz-Grundverordnung (DSGVO) hinsichtlich der von Dextor als Verantwortlichem verarbeiteten Kontoinformationen (siehe Abschnitt 2) folgende Rechte: Zugang zu ihren Daten, Berichtigung oder Löschung, Einschränkung der Verarbeitung oder Widerspruch dagegen sowie Datenübertragbarkeit. Diese Rechte können über die unten angegebenen Kontaktdaten ausgeübt werden; zudem kann eine Beschwerde bei der zuständigen Datenschutz-Aufsichtsbehörde eingereicht werden. Hinsichtlich der klinischen Informationen ihrer Patientinnen handelt die medizinische Fachkraft als Verantwortliche und Dextor als Auftragsverarbeiter — siehe Abschnitt 10."
+      ],
+      [
+        "17. Kontakt",
+        "Für Datenschutzfragen, Zugriffs- oder Löschanträge und andere Anliegen zu personenbezogenen Daten:<br><br><strong>Dextor / DrDexterSoft</strong><br>Paraguay<br><a href=\"mailto:support@dextorsuite.com\">support@dextorsuite.com</a><br><a href=\"https://www.dextorsuite.com\">www.dextorsuite.com</a>"
+      ]
+    ]
+  }
+};
+
+function chooseLanguage(){
+ const saved=localStorage.getItem("dextorPrivacyLang");
+ if(saved && policies[saved]) return saved;
+ const langs=(navigator.languages||[navigator.language||"en"]).map(x=>x.toLowerCase().split("-")[0]);
+ return langs.find(x=>policies[x]) || "en";
+}
+function render(lang){
+ const p=policies[lang]||policies.en;
+ document.documentElement.lang=lang;
+ document.title=`Dextor — ${p.title}`;
+ document.getElementById("tagline").textContent=p.tag;
+ document.getElementById("policy").innerHTML=`<h1>${p.title}</h1><div class="updated">${p.updated}</div>`+
+   p.sections.map(s=>`<section><h2>${s[0]}</h2><p>${s[1]}</p></section>`).join("");
+ document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+ localStorage.setItem("dextorPrivacyLang",lang);
+}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>render(b.dataset.lang)));
+render(chooseLanguage());
+</script>
+</body>
+</html>
