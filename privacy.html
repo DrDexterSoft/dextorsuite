@@ -41,7 +41,7 @@ const policies = {
   "en": {
     "tag": "Practice Management for Gynecology & Obstetrics",
     "title": "Privacy Policy",
-    "updated": "Last updated: 2026-09-30",
+    "updated": "Last updated: 2026-10-26",
     "sections": [
       [
         "1. Introduction",
@@ -53,7 +53,7 @@ const policies = {
       ],
       [
         "3. Cloud storage and encryption",
-        "Clinical information synchronized through Dextor is encrypted on the user's device before being transmitted to cloud storage. Dextor currently uses AES-256-GCM encryption for clinical information synchronized with the cloud. Cloud database records contain technical identifiers, timestamps, and encrypted data rather than clinical content in readable plain text. This encryption provides an additional layer of protection for clinical information. Dextor does not represent this architecture as zero-knowledge encryption."
+        "Clinical information synchronized through Dextor is encrypted on the user's device before being transmitted to cloud storage. Dextor currently uses AES-256-GCM encryption for clinical information synchronized with the cloud. Cloud database records contain technical identifiers, timestamps, and encrypted data rather than clinical content in readable plain text. This encryption provides an additional layer of protection for clinical information. Dextor does not represent this architecture as zero-knowledge encryption. Data is also transmitted over encrypted connections (HTTPS/TLS)."
       ],
       [
         "4. Local storage",
@@ -65,7 +65,7 @@ const policies = {
       ],
       [
         "6. Cloud infrastructure",
-        "Dextor uses Google Firebase services, including Firebase Authentication and Cloud Firestore, for authentication, synchronization, and cloud infrastructure. Clinical data synchronized with Cloud Firestore is encrypted by Dextor before transmission. Each healthcare professional's cloud records are logically isolated through authenticated user identifiers and database security rules. Google processes information according to the terms and privacy practices applicable to its Firebase and Google Cloud services."
+        "Dextor uses Google Firebase services, including Firebase Authentication and Cloud Firestore, for authentication, synchronization, and cloud infrastructure. Clinical data synchronized with Cloud Firestore is encrypted by Dextor before transmission. Each healthcare professional's cloud records are logically isolated through authenticated user identifiers and database security rules. Google processes information according to the terms and privacy practices applicable to its Firebase and Google Cloud services. Dextor does not sell personal information and does not share it with third parties other than the service providers described in this policy (Google, for Firebase, authentication, and Google Play; Apple, for Sign in with Apple)."
       ],
       [
         "7. Authentication",
@@ -73,7 +73,7 @@ const policies = {
       ],
       [
         "8. Payments and licensing",
-        "For purchases through Paddle, Paddle processes payment and billing information as merchant of record under its own privacy policy. Dextor processes account email, customer and transaction identifiers, purchased plan, subscription status and billing dates to manage access and support. Dextor does not store full payment card details. Earlier purchases remain subject to the original payment provider’s privacy practices. Billing records may be retained where required for accounting, dispute handling or legal obligations after account deletion. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+        "Purchases are made through Google Play. Google processes payment and billing information under its own privacy policy; Dextor does not receive card details. To manage your license, Dextor processes your account email, the purchase identifier (token) and order data supplied by Google Play, the purchased plan, subscription status and renewal dates. Records may be retained after account deletion where required for accounting, dispute handling or legal obligations. <a href=\"https://policies.google.com/privacy\">Google — Privacy Policy</a>."
       ],
       [
         "9. Purposes of processing",
@@ -85,7 +85,7 @@ const policies = {
       ],
       [
         "11. Data retention and deletion",
-        "Information is retained while necessary to provide Dextor and as required for legitimate operational, security, contractual, or legal purposes. From within the app, the healthcare professional can delete an individual patient record at any time, or their entire account (which also deletes every patient record, surgery, and configuration associated with that account) — both actions require a two-step confirmation, since they are irreversible. Deleting the account also automatically cancels any active subscription. These actions may be subject to legal or professional medical-record retention requirements applicable to the healthcare professional or relevant jurisdiction, which remain the healthcare professional's responsibility."
+        "Information is retained while necessary to provide Dextor and as required for legitimate operational, security, contractual, or legal purposes. The healthcare professional can delete an individual patient record at any time, or their entire account, from within the app (Settings → Delete account), or request the deletion of their account without the app by following the instructions at <a href=\"https://dextorsuite.com/delete-account\">https://dextorsuite.com/delete-account</a> (requests are processed within 30 days). Deleting the account permanently deletes the account, every patient record, surgery, and configuration stored in the cloud for it, and the license information, and automatically cancels the renewal of any active subscription. Both actions in the app require a two-step confirmation, since they are irreversible. Billing records (purchase identifier, plan, and dates) may be retained after deletion where required for accounting, dispute handling, or legal obligations. Information stored only on the user's own devices, and backups exported by the user, are under the user's control and are not deleted remotely. These actions may be subject to legal or professional medical-record retention requirements applicable to the healthcare professional or relevant jurisdiction, which remain the healthcare professional's responsibility."
       ],
       [
         "12. Data security",
@@ -116,7 +116,7 @@ const policies = {
   "es": {
     "tag": "Gestión de consultorio para Ginecología y Obstetricia",
     "title": "Política de Privacidad",
-    "updated": "Última actualización: 2026-09-30",
+    "updated": "Última actualización: 2026-10-26",
     "sections": [
       [
         "1. Introducción",
@@ -128,7 +128,7 @@ const policies = {
       ],
       [
         "3. Almacenamiento en la nube y cifrado",
-        "La información clínica sincronizada mediante Dextor se cifra en el dispositivo antes de transmitirse a la nube. Dextor utiliza actualmente AES-256-GCM para la información clínica sincronizada. Los registros de la base de datos contienen identificadores técnicos, marcas temporales y datos cifrados en lugar del contenido clínico en texto plano legible. El cifrado proporciona una capa adicional de protección. Dextor no presenta esta arquitectura como cifrado de conocimiento cero (zero-knowledge)."
+        "La información clínica sincronizada mediante Dextor se cifra en el dispositivo antes de transmitirse a la nube. Dextor utiliza actualmente AES-256-GCM para la información clínica sincronizada. Los registros de la base de datos contienen identificadores técnicos, marcas temporales y datos cifrados en lugar del contenido clínico en texto plano legible. El cifrado proporciona una capa adicional de protección. Dextor no presenta esta arquitectura como cifrado de conocimiento cero (zero-knowledge). Además, los datos viajan por conexiones cifradas (HTTPS/TLS)."
       ],
       [
         "4. Almacenamiento local",
@@ -140,7 +140,7 @@ const policies = {
       ],
       [
         "6. Infraestructura en la nube",
-        "Dextor utiliza servicios de Google Firebase, incluyendo Firebase Authentication y Cloud Firestore, para autenticación, sincronización e infraestructura en la nube. Los datos clínicos son cifrados por Dextor antes de transmitirse a Cloud Firestore. Los registros de cada profesional están aislados lógicamente mediante identificadores autenticados y reglas de seguridad de la base de datos. Google procesa determinada información conforme a los términos y prácticas de privacidad aplicables a Firebase y Google Cloud."
+        "Dextor utiliza servicios de Google Firebase, incluyendo Firebase Authentication y Cloud Firestore, para autenticación, sincronización e infraestructura en la nube. Los datos clínicos son cifrados por Dextor antes de transmitirse a Cloud Firestore. Los registros de cada profesional están aislados lógicamente mediante identificadores autenticados y reglas de seguridad de la base de datos. Google procesa determinada información conforme a los términos y prácticas de privacidad aplicables a Firebase y Google Cloud. Dextor no vende información personal ni la comparte con terceros distintos de los proveedores de servicios descritos en esta política (Google, por Firebase, la autenticación y Google Play; Apple, por Sign in with Apple)."
       ],
       [
         "7. Autenticación",
@@ -148,7 +148,7 @@ const policies = {
       ],
       [
         "8. Pagos y licencias",
-        "Para las compras mediante Paddle, Paddle procesa la información de pago y facturación como vendedor registrado, conforme a su política de privacidad. Dextor procesa el correo de la cuenta, identificadores de cliente y transacción, plan adquirido, estado de suscripción y fechas de facturación para gestionar el acceso y el soporte. Dextor no almacena datos completos de tarjetas. Las compras anteriores siguen sujetas a las prácticas del proveedor de pago original. Los registros de facturación pueden conservarse por obligaciones contables, resolución de disputas o requisitos legales después de eliminar la cuenta. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+        "Las compras se hacen mediante Google Play. Google procesa la información de pago y facturación conforme a su propia política de privacidad; Dextor no recibe datos de tarjetas. Para gestionar tu licencia, Dextor procesa el correo de tu cuenta, el identificador (token) y los datos del pedido que entrega Google Play, el plan comprado, el estado de la suscripción y las fechas de renovación. Los registros pueden conservarse tras eliminar la cuenta cuando lo exijan la contabilidad, la gestión de disputas u obligaciones legales. <a href=\"https://policies.google.com/privacy\">Google — Política de privacidad</a>."
       ],
       [
         "9. Finalidades del tratamiento",
@@ -160,7 +160,7 @@ const policies = {
       ],
       [
         "11. Conservación y eliminación",
-        "La información se conserva mientras sea necesaria para proporcionar Dextor y cuando resulte necesaria por motivos operativos, de seguridad, contractuales o legales legítimos. Desde la propia aplicación, el profesional puede eliminar en cualquier momento una ficha de paciente en particular, o su cuenta completa (lo que elimina también todas las fichas, cirugías y configuración asociadas a esa cuenta) — ambas acciones piden una doble confirmación, ya que son irreversibles. Al eliminar la cuenta, también se cancela automáticamente cualquier suscripción activa. Estas acciones pueden estar sujetas a obligaciones legales o profesionales de conservación de historias clínicas aplicables al profesional o a la jurisdicción correspondiente, que siguen siendo responsabilidad del profesional."
+        "La información se conserva mientras sea necesaria para prestar Dextor y según lo exijan fines operativos, de seguridad, contractuales o legales legítimos. El profesional puede eliminar una ficha de paciente en cualquier momento, o su cuenta completa, desde la app (Configuraciones → Eliminar cuenta), o pedir la eliminación de su cuenta sin la app siguiendo las instrucciones de <a href=\"https://dextorsuite.com/delete-account\">https://dextorsuite.com/delete-account</a> (las solicitudes se procesan en un plazo de 30 días). Eliminar la cuenta borra de forma definitiva la cuenta, todas las fichas de pacientes, cirugías y la configuración guardadas en la nube, y la información de licencia, y cancela automáticamente la renovación de cualquier suscripción activa. Ambas acciones dentro de la app requieren una confirmación en dos pasos, porque son irreversibles. Los registros de facturación (identificador de la compra, plan y fechas) pueden conservarse tras la eliminación cuando lo exijan la contabilidad, la gestión de disputas u obligaciones legales. La información guardada solo en los dispositivos del usuario y las copias de seguridad que exportó están bajo su control y no se eliminan a distancia. Estas acciones pueden estar sujetas a requisitos legales o profesionales de conservación de historias clínicas aplicables al profesional o a la jurisdicción correspondiente, que siguen siendo responsabilidad del profesional."
       ],
       [
         "12. Seguridad",
@@ -190,7 +190,7 @@ const policies = {
   },
   "pt": {
     "title": "Política de Privacidade",
-    "updated": "Última atualização: 2026-09-30",
+    "updated": "Última atualização: 2026-10-26",
     "tag": "Gestão de consultório para Ginecologia e Obstetrícia",
     "sections": [
       [
@@ -203,7 +203,7 @@ const policies = {
       ],
       [
         "3. Armazenamento em nuvem e criptografia",
-        "As informações clínicas sincronizadas são criptografadas no dispositivo antes da transmissão. Dextor utiliza atualmente AES-256-GCM. Os registros na nuvem contêm identificadores técnicos, timestamps e dados criptografados, em vez do conteúdo clínico em texto legível. A criptografia fornece uma camada adicional de proteção. Dextor não apresenta esta arquitetura como criptografia de conhecimento zero (zero-knowledge)."
+        "As informações clínicas sincronizadas são criptografadas no dispositivo antes da transmissão. Dextor utiliza atualmente AES-256-GCM. Os registros na nuvem contêm identificadores técnicos, timestamps e dados criptografados, em vez do conteúdo clínico em texto legível. A criptografia fornece uma camada adicional de proteção. Dextor não apresenta esta arquitetura como criptografia de conhecimento zero (zero-knowledge). Além disso, os dados trafegam por conexões criptografadas (HTTPS/TLS)."
       ],
       [
         "4. Armazenamento local",
@@ -215,7 +215,7 @@ const policies = {
       ],
       [
         "6. Infraestrutura em nuvem",
-        "Dextor utiliza Google Firebase, incluindo Firebase Authentication e Cloud Firestore. Os dados clínicos são criptografados pelo Dextor antes da transmissão ao Cloud Firestore. Os registros de cada profissional são isolados logicamente por identificadores autenticados e regras de segurança. O Google processa determinadas informações conforme os termos e práticas aplicáveis ao Firebase e Google Cloud."
+        "Dextor utiliza Google Firebase, incluindo Firebase Authentication e Cloud Firestore. Os dados clínicos são criptografados pelo Dextor antes da transmissão ao Cloud Firestore. Os registros de cada profissional são isolados logicamente por identificadores autenticados e regras de segurança. O Google processa determinadas informações conforme os termos e práticas aplicáveis ao Firebase e Google Cloud. O Dextor não vende informações pessoais nem as compartilha com terceiros além dos prestadores de serviços descritos nesta política (Google, pelo Firebase, autenticação e Google Play; Apple, pelo Sign in with Apple)."
       ],
       [
         "7. Autenticação",
@@ -223,7 +223,7 @@ const policies = {
       ],
       [
         "8. Pagamentos e licenciamento",
-        "Nas compras pelo Paddle, o Paddle processa informações de pagamento e cobrança como vendedor registrado, conforme sua política de privacidade. Dextor processa email da conta, identificadores de cliente e transação, plano, estado da assinatura e datas de cobrança para gerenciar acesso e suporte. Não armazena dados completos de cartões. Compras anteriores seguem as práticas do provedor original. Registros de cobrança podem ser mantidos após a exclusão da conta por obrigações contábeis, disputas ou requisitos legais. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+        "As compras são feitas pelo Google Play. O Google processa as informações de pagamento e cobrança conforme sua própria política de privacidade; o Dextor não recebe dados de cartão. Para gerenciar sua licença, o Dextor processa o e-mail da conta, o identificador (token) e os dados do pedido fornecidos pelo Google Play, o plano comprado, o status da assinatura e as datas de renovação. Os registros podem ser mantidos após a exclusão da conta quando exigido por contabilidade, tratamento de disputas ou obrigações legais. <a href=\"https://policies.google.com/privacy\">Google — Política de Privacidade</a>."
       ],
       [
         "9. Finalidades do tratamento",
@@ -235,7 +235,7 @@ const policies = {
       ],
       [
         "11. Retenção e exclusão de dados",
-        "As informações são mantidas enquanto necessárias à prestação do serviço e por motivos operacionais, de segurança, contratuais ou legais legítimos. Dentro do próprio aplicativo, o profissional pode excluir a qualquer momento o prontuário de uma paciente específica, ou sua conta completa (o que também exclui todos os prontuários, cirurgias e configurações associados a essa conta) — as duas ações exigem uma dupla confirmação, por serem irreversíveis. Ao excluir a conta, qualquer assinatura ativa também é cancelada automaticamente. Essas ações podem estar sujeitas a obrigações legais ou profissionais de retenção de prontuários aplicáveis ao profissional ou à jurisdição correspondente, que continuam sendo responsabilidade do profissional."
+        "As informações são mantidas enquanto necessárias para fornecer o Dextor e conforme exigido por finalidades operacionais, de segurança, contratuais ou legais legítimas. O profissional pode excluir uma ficha de paciente a qualquer momento, ou sua conta inteira, pelo aplicativo (Configurações → Excluir conta), ou solicitar a exclusão da conta sem o aplicativo seguindo as instruções em <a href=\"https://dextorsuite.com/delete-account\">https://dextorsuite.com/delete-account</a> (as solicitações são processadas em até 30 dias). Excluir a conta apaga definitivamente a conta, todas as fichas de pacientes, cirurgias e configurações guardadas na nuvem, e as informações de licença, e cancela automaticamente a renovação de qualquer assinatura ativa. As duas ações no aplicativo exigem confirmação em duas etapas, pois são irreversíveis. Os registros de cobrança (identificador da compra, plano e datas) podem ser mantidos após a exclusão quando exigido por contabilidade, tratamento de disputas ou obrigações legais. As informações guardadas apenas nos dispositivos do usuário e os backups por ele exportados ficam sob seu controle e não são excluídos remotamente. Essas ações podem estar sujeitas a exigências legais ou profissionais de guarda de prontuários aplicáveis ao profissional ou à jurisdição, que continuam sendo responsabilidade do profissional."
       ],
       [
         "12. Segurança dos dados",
@@ -265,7 +265,7 @@ const policies = {
   },
   "it": {
     "title": "Informativa sulla Privacy",
-    "updated": "Ultimo aggiornamento: 2026-09-30",
+    "updated": "Ultimo aggiornamento: 2026-10-26",
     "tag": "Gestione dello studio per Ginecologia e Ostetricia",
     "sections": [
       [
@@ -278,7 +278,7 @@ const policies = {
       ],
       [
         "3. Archiviazione cloud e cifratura",
-        "I dati clinici sincronizzati vengono cifrati sul dispositivo prima della trasmissione. Dextor utilizza attualmente AES-256-GCM. I record cloud contengono identificatori tecnici, timestamp e dati cifrati invece del contenuto clinico in chiaro. La cifratura offre un ulteriore livello di protezione. Dextor non presenta questa architettura come cifratura zero-knowledge."
+        "I dati clinici sincronizzati vengono cifrati sul dispositivo prima della trasmissione. Dextor utilizza attualmente AES-256-GCM. I record cloud contengono identificatori tecnici, timestamp e dati cifrati invece del contenuto clinico in chiaro. La cifratura offre un ulteriore livello di protezione. Dextor non presenta questa architettura come cifratura zero-knowledge. Inoltre, i dati viaggiano su connessioni cifrate (HTTPS/TLS)."
       ],
       [
         "4. Archiviazione locale",
@@ -290,7 +290,7 @@ const policies = {
       ],
       [
         "6. Infrastruttura cloud",
-        "Dextor utilizza Google Firebase, inclusi Firebase Authentication e Cloud Firestore. I dati clinici sono cifrati da Dextor prima della trasmissione a Cloud Firestore. I record di ciascun professionista sono logicamente isolati mediante identificatori autenticati e regole di sicurezza. Google tratta determinate informazioni secondo i termini e le pratiche applicabili a Firebase e Google Cloud."
+        "Dextor utilizza Google Firebase, inclusi Firebase Authentication e Cloud Firestore. I dati clinici sono cifrati da Dextor prima della trasmissione a Cloud Firestore. I record di ciascun professionista sono logicamente isolati mediante identificatori autenticati e regole di sicurezza. Google tratta determinate informazioni secondo i termini e le pratiche applicabili a Firebase e Google Cloud. Dextor non vende informazioni personali e non le condivide con terzi diversi dai fornitori di servizi descritti in questa informativa (Google, per Firebase, autenticazione e Google Play; Apple, per Sign in with Apple)."
       ],
       [
         "7. Autenticazione",
@@ -298,7 +298,7 @@ const policies = {
       ],
       [
         "8. Pagamenti e licenze",
-        "Per gli acquisti tramite Paddle, Paddle tratta i dati di pagamento e fatturazione come venditore ufficiale secondo la propria informativa. Dextor tratta email dell’account, identificativi cliente e transazione, piano, stato dell’abbonamento e date di fatturazione per gestire accesso e assistenza. Non conserva dati completi delle carte. Gli acquisti precedenti seguono le pratiche del fornitore originale. I registri di fatturazione possono essere conservati dopo la cancellazione dell’account per obblighi contabili, controversie o requisiti legali. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+        "Gli acquisti avvengono tramite Google Play. Google tratta i dati di pagamento e fatturazione secondo la propria informativa; Dextor non riceve i dati della carta. Per gestire la licenza, Dextor tratta l’email dell’account, l’identificativo (token) e i dati dell’ordine forniti da Google Play, il piano acquistato, lo stato dell’abbonamento e le date di rinnovo. I registri possono essere conservati dopo l’eliminazione dell’account quando richiesto da contabilità, gestione di controversie o obblighi di legge. <a href=\"https://policies.google.com/privacy\">Google — Informativa sulla privacy</a>."
       ],
       [
         "9. Finalità del trattamento",
@@ -310,7 +310,7 @@ const policies = {
       ],
       [
         "11. Conservazione e cancellazione dei dati",
-        "Le informazioni vengono conservate finché necessarie al servizio e per legittime esigenze operative, di sicurezza, contrattuali o legali. Dall'interno dell'app, il professionista può eliminare in qualsiasi momento la cartella di una singola paziente, oppure l'intero account (che elimina anche tutte le cartelle, gli interventi chirurgici e la configurazione associati a quell'account) — entrambe le azioni richiedono una doppia conferma, trattandosi di operazioni irreversibili. Eliminando l'account viene automaticamente annullato anche qualsiasi abbonamento attivo. Queste azioni possono essere soggette a obblighi legali o professionali di conservazione delle cartelle cliniche applicabili al professionista o alla giurisdizione di riferimento, che restano responsabilità del professionista."
+        "Le informazioni vengono conservate finché necessario per fornire Dextor e come richiesto da finalità operative, di sicurezza, contrattuali o legali legittime. Il professionista può eliminare una scheda paziente in qualsiasi momento, o l'intero account, dall'app (Impostazioni → Elimina account), oppure chiedere l'eliminazione dell'account senza l'app seguendo le istruzioni su <a href=\"https://dextorsuite.com/delete-account\">https://dextorsuite.com/delete-account</a> (le richieste vengono elaborate entro 30 giorni). Eliminare l'account cancella definitivamente l'account, tutte le schede dei pazienti, gli interventi e le impostazioni salvati nel cloud, e le informazioni sulla licenza, e annulla automaticamente il rinnovo di qualsiasi abbonamento attivo. Entrambe le azioni nell'app richiedono una doppia conferma, perché sono irreversibili. I registri di fatturazione (identificativo dell'acquisto, piano e date) possono essere conservati dopo l'eliminazione quando richiesto da contabilità, gestione di controversie o obblighi di legge. Le informazioni salvate solo sui dispositivi dell'utente e i backup da lui esportati sono sotto il suo controllo e non vengono eliminati da remoto. Queste azioni possono essere soggette a requisiti legali o professionali di conservazione delle cartelle cliniche applicabili al professionista o alla giurisdizione, che restano responsabilità del professionista."
       ],
       [
         "12. Sicurezza dei dati",
@@ -340,7 +340,7 @@ const policies = {
   },
   "fr": {
     "title": "Politique de confidentialité",
-    "updated": "Dernière mise à jour: 2026-09-30",
+    "updated": "Dernière mise à jour: 2026-10-26",
     "tag": "Gestion de cabinet pour la Gynécologie et l’Obstétrique",
     "sections": [
       [
@@ -353,7 +353,7 @@ const policies = {
       ],
       [
         "3. Stockage cloud et chiffrement",
-        "Les données cliniques synchronisées sont chiffrées sur l'appareil avant transmission. Dextor utilise actuellement AES-256-GCM. Les enregistrements cloud contiennent des identifiants techniques, des horodatages et des données chiffrées plutôt que le contenu clinique en clair. Le chiffrement apporte une couche de protection supplémentaire. Dextor ne présente pas cette architecture comme un chiffrement zero-knowledge."
+        "Les données cliniques synchronisées sont chiffrées sur l'appareil avant transmission. Dextor utilise actuellement AES-256-GCM. Les enregistrements cloud contiennent des identifiants techniques, des horodatages et des données chiffrées plutôt que le contenu clinique en clair. Le chiffrement apporte une couche de protection supplémentaire. Dextor ne présente pas cette architecture comme un chiffrement zero-knowledge. De plus, les données transitent par des connexions chiffrées (HTTPS/TLS)."
       ],
       [
         "4. Stockage local",
@@ -365,7 +365,7 @@ const policies = {
       ],
       [
         "6. Infrastructure cloud",
-        "Dextor utilise Google Firebase, notamment Firebase Authentication et Cloud Firestore. Les données cliniques sont chiffrées par Dextor avant leur transmission à Cloud Firestore. Les données de chaque professionnel sont isolées logiquement grâce aux identifiants authentifiés et aux règles de sécurité. Google traite certaines informations conformément aux conditions et pratiques applicables à Firebase et Google Cloud."
+        "Dextor utilise Google Firebase, notamment Firebase Authentication et Cloud Firestore. Les données cliniques sont chiffrées par Dextor avant leur transmission à Cloud Firestore. Les données de chaque professionnel sont isolées logiquement grâce aux identifiants authentifiés et aux règles de sécurité. Google traite certaines informations conformément aux conditions et pratiques applicables à Firebase et Google Cloud. Dextor ne vend pas d'informations personnelles et ne les partage pas avec des tiers autres que les prestataires décrits dans cette politique (Google, pour Firebase, l'authentification et Google Play ; Apple, pour Sign in with Apple)."
       ],
       [
         "7. Authentification",
@@ -373,7 +373,7 @@ const policies = {
       ],
       [
         "8. Paiements et licences",
-        "Pour les achats via Paddle, Paddle traite les données de paiement et de facturation en tant que vendeur officiel selon sa politique de confidentialité. Dextor traite l’email du compte, les identifiants client et transaction, l’offre, le statut de l’abonnement et les dates de facturation pour gérer l’accès et l’assistance. Les données complètes des cartes ne sont pas conservées. Les achats antérieurs restent soumis aux pratiques du prestataire initial. Les données de facturation peuvent être conservées après suppression du compte pour des obligations comptables, des litiges ou des exigences légales. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+        "Les achats se font via Google Play. Google traite les informations de paiement et de facturation selon sa propre politique de confidentialité ; Dextor ne reçoit pas les données de carte. Pour gérer votre licence, Dextor traite l’email du compte, l’identifiant (token) et les données de commande fournis par Google Play, la formule achetée, l’état de l’abonnement et les dates de renouvellement. Les enregistrements peuvent être conservés après la suppression du compte lorsque la comptabilité, la gestion des litiges ou la loi l’exigent. <a href=\"https://policies.google.com/privacy\">Google — Politique de confidentialité</a>."
       ],
       [
         "9. Finalités du traitement",
@@ -385,7 +385,7 @@ const policies = {
       ],
       [
         "11. Conservation et suppression des données",
-        "Les informations sont conservées aussi longtemps que nécessaire au service et pour des motifs opérationnels, de sécurité, contractuels ou légaux légitimes. Depuis l'application elle-même, le professionnel peut supprimer à tout moment le dossier d'une patiente en particulier, ou son compte entier (ce qui supprime aussi tous les dossiers, interventions chirurgicales et paramètres associés à ce compte) — ces deux actions demandent une double confirmation, car elles sont irréversibles. La suppression du compte annule aussi automatiquement tout abonnement actif. Ces actions peuvent être soumises aux obligations légales ou professionnelles de conservation des dossiers médicaux applicables au professionnel ou à la juridiction concernée, qui restent de la responsabilité du professionnel."
+        "Les informations sont conservées tant qu'elles sont nécessaires pour fournir Dextor et selon les finalités opérationnelles, de sécurité, contractuelles ou légales légitimes. Le professionnel peut supprimer un dossier de patiente à tout moment, ou l'ensemble de son compte, depuis l'application (Paramètres → Supprimer le compte), ou demander la suppression de son compte sans l'application en suivant les instructions de <a href=\"https://dextorsuite.com/delete-account\">https://dextorsuite.com/delete-account</a> (les demandes sont traitées sous 30 jours). Supprimer le compte efface définitivement le compte, tous les dossiers de patientes, interventions et paramètres stockés dans le cloud, ainsi que les informations de licence, et annule automatiquement le renouvellement de tout abonnement actif. Les deux actions dans l'application exigent une double confirmation, car elles sont irréversibles. Les enregistrements de facturation (identifiant d'achat, formule et dates) peuvent être conservés après la suppression lorsque la comptabilité, la gestion des litiges ou la loi l'exigent. Les informations stockées uniquement sur les appareils de l'utilisateur et les sauvegardes qu'il a exportées restent sous son contrôle et ne sont pas supprimées à distance. Ces actions peuvent être soumises à des exigences légales ou professionnelles de conservation des dossiers médicaux applicables au professionnel ou à la juridiction concernée, qui restent de sa responsabilité."
       ],
       [
         "12. Sécurité des données",
@@ -415,7 +415,7 @@ const policies = {
   },
   "de": {
     "title": "Datenschutzerklärung",
-    "updated": "Zuletzt aktualisiert: 2026-09-30",
+    "updated": "Zuletzt aktualisiert: 2026-10-26",
     "tag": "Praxisverwaltung für Gynäkologie und Geburtshilfe",
     "sections": [
       [
@@ -428,7 +428,7 @@ const policies = {
       ],
       [
         "3. Cloud-Speicherung und Verschlüsselung",
-        "Synchronisierte klinische Daten werden vor der Übertragung auf dem Gerät verschlüsselt. Dextor verwendet derzeit AES-256-GCM. Cloud-Datensätze enthalten technische Kennungen, Zeitstempel und verschlüsselte Daten anstelle klinischer Inhalte im lesbaren Klartext. Die Verschlüsselung bietet eine zusätzliche Schutzebene. Dextor bezeichnet diese Architektur nicht als Zero-Knowledge-Verschlüsselung."
+        "Synchronisierte klinische Daten werden vor der Übertragung auf dem Gerät verschlüsselt. Dextor verwendet derzeit AES-256-GCM. Cloud-Datensätze enthalten technische Kennungen, Zeitstempel und verschlüsselte Daten anstelle klinischer Inhalte im lesbaren Klartext. Die Verschlüsselung bietet eine zusätzliche Schutzebene. Dextor bezeichnet diese Architektur nicht als Zero-Knowledge-Verschlüsselung. Außerdem werden Daten über verschlüsselte Verbindungen (HTTPS/TLS) übertragen."
       ],
       [
         "4. Lokale Speicherung",
@@ -440,7 +440,7 @@ const policies = {
       ],
       [
         "6. Cloud-Infrastruktur",
-        "Dextor nutzt Google Firebase, einschließlich Firebase Authentication und Cloud Firestore. Klinische Daten werden von Dextor vor der Übertragung an Cloud Firestore verschlüsselt. Die Datensätze jeder Fachkraft sind durch authentifizierte Benutzerkennungen und Datenbank-Sicherheitsregeln logisch getrennt. Google verarbeitet bestimmte Informationen gemäß den für Firebase und Google Cloud geltenden Bedingungen und Datenschutzpraktiken."
+        "Dextor nutzt Google Firebase, einschließlich Firebase Authentication und Cloud Firestore. Klinische Daten werden von Dextor vor der Übertragung an Cloud Firestore verschlüsselt. Die Datensätze jeder Fachkraft sind durch authentifizierte Benutzerkennungen und Datenbank-Sicherheitsregeln logisch getrennt. Google verarbeitet bestimmte Informationen gemäß den für Firebase und Google Cloud geltenden Bedingungen und Datenschutzpraktiken. Dextor verkauft keine personenbezogenen Daten und gibt sie nicht an Dritte weiter, außer an die in dieser Erklärung beschriebenen Dienstleister (Google für Firebase, Authentifizierung und Google Play; Apple für Sign in with Apple)."
       ],
       [
         "7. Authentifizierung",
@@ -448,7 +448,7 @@ const policies = {
       ],
       [
         "8. Zahlungen und Lizenzierung",
-        "Bei Käufen über Paddle verarbeitet Paddle Zahlungs- und Abrechnungsdaten als offizieller Verkäufer gemäß seiner Datenschutzerklärung. Dextor verarbeitet Konto-E-Mail, Kunden- und Transaktionskennungen, Tarif, Abonnementstatus und Abrechnungsdaten für Zugriff und Support. Vollständige Kartendaten werden nicht gespeichert. Frühere Käufe unterliegen den Praktiken des ursprünglichen Anbieters. Abrechnungsunterlagen können nach Kontolöschung für Buchhaltung, Streitfälle oder gesetzliche Pflichten aufbewahrt werden. <a href=\"https://www.paddle.com/legal/privacy\">Paddle — Privacy Policy</a>."
+        "Käufe erfolgen über Google Play. Google verarbeitet Zahlungs- und Abrechnungsdaten nach der eigenen Datenschutzerklärung; Dextor erhält keine Kartendaten. Zur Verwaltung Ihrer Lizenz verarbeitet Dextor die Konto-E-Mail, die von Google Play gelieferte Kennung (Token) und Bestelldaten, den gekauften Tarif, den Abostatus und die Verlängerungsdaten. Aufzeichnungen können nach der Kontolöschung aufbewahrt werden, soweit Buchhaltung, Streitfallbearbeitung oder gesetzliche Pflichten es verlangen. <a href=\"https://policies.google.com/privacy\">Google – Datenschutzerklärung</a>."
       ],
       [
         "9. Zwecke der Verarbeitung",
@@ -460,7 +460,7 @@ const policies = {
       ],
       [
         "11. Datenspeicherung und Löschung",
-        "Informationen werden so lange gespeichert, wie dies zur Bereitstellung des Dienstes sowie aus legitimen betrieblichen, sicherheitsbezogenen, vertraglichen oder rechtlichen Gründen erforderlich ist. Innerhalb der App kann die medizinische Fachkraft jederzeit die Akte einer einzelnen Patientin löschen oder ihr gesamtes Konto (wodurch auch alle Akten, Operationen und Einstellungen dieses Kontos gelöscht werden) — beide Aktionen erfordern eine doppelte Bestätigung, da sie unwiderruflich sind. Beim Löschen des Kontos wird auch ein eventuell aktives Abonnement automatisch gekündigt. Diese Aktionen können rechtlichen oder beruflichen Aufbewahrungspflichten für Patientenakten unterliegen, die für die medizinische Fachkraft oder die jeweilige Rechtsordnung gelten und weiterhin in deren Verantwortung liegen."
+        "Informationen werden so lange gespeichert, wie dies zur Bereitstellung von Dextor sowie aus legitimen betrieblichen, sicherheitsbezogenen, vertraglichen oder rechtlichen Gründen erforderlich ist. Die Fachperson kann in der App jederzeit einzelne Patientenakten oder das gesamte Konto löschen (Einstellungen → Konto löschen) oder die Löschung des Kontos ohne die App beantragen, gemäß den Anweisungen unter <a href=\"https://dextorsuite.com/delete-account\">https://dextorsuite.com/delete-account</a> (Anfragen werden innerhalb von 30 Tagen bearbeitet). Das Löschen des Kontos entfernt dauerhaft das Konto, alle in der Cloud gespeicherten Patientenakten, Operationen und Einstellungen sowie die Lizenzinformationen und beendet automatisch die Verlängerung eines aktiven Abonnements. Beide Aktionen in der App erfordern eine zweistufige Bestätigung, da sie unumkehrbar sind. Abrechnungsdaten (Kaufkennung, Tarif und Daten) können nach der Löschung aufbewahrt werden, soweit Buchhaltung, Streitfallbearbeitung oder gesetzliche Pflichten es verlangen. Nur auf den eigenen Geräten der Nutzerin oder des Nutzers gespeicherte Informationen und selbst exportierte Sicherungen liegen in deren Hand und werden nicht aus der Ferne gelöscht. Diese Aktionen können gesetzlichen oder berufsrechtlichen Aufbewahrungspflichten für Patientenakten unterliegen, die in der Verantwortung der Fachperson verbleiben."
       ],
       [
         "12. Datensicherheit",
